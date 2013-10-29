@@ -1,0 +1,132 @@
+/* 
+  Localizable.strings
+  Circle
+
+  Created by admin on 13-9-28.
+  Copyright (c) 2013年 icss. All rights reserved.
+*/ 
+"login.error.tip" = "Login error please try again";
+"register.error.unsupport" = "Sorry,the app has not open to register";
+"previous" = "Previous";
+"next" = "Next";
+"done" = "Done";
+"ok" = "Ok";
+"menu"="Menu";
+"cancel" = "Cancel";
+"retake" = "Retake";
+"reply" = "Reply";
+"move_and_scale"="Move and Scale";
+"choose_photo" = "Choose photo";
+"take_photo_from_camera" = "Take photo from camera";
+"take_photo_from_library" = "Take photo from library";
+
+"time.now.title" = "Just";
+"time.today.title" = "Today";
+"time.yesterday.title" = "Yesterday";
+"time.beforeyesterday.title" = "Before yesterday";
+"time.minute.title" = "Minute";
+"time.hour.title" = "Hour";
+
+
+"action.login" = "Login";
+"action.title" = "You can do the actions";
+"action.fav" = "Collect";
+"action.sub" = "Attention";
+"action.friend" = "Invite Friends";
+"action.black" = "Blacklist";
+"action.del" = "Delete";
+"action.remove" = "Remove";
+"action.message" = "Send Message";
+
+
+"tip.loading" = "Loading";
+"tip.loadmore" = "Load More";
+"tip.release.refresh" = "Release to refresh";
+"tip.release.loadmore" = "Release to load more";
+"tip.pull.refresh" = "Pull down to refresh";
+"tip.pull.loadmore" = "Push down to load more";
+
+"error.title" = "Error";
+"error.load.tip" = "Load data error";
+"error.connect.tip" = "Sorry,can not connect to server";
+"error.connect.register.tip" = "Sorry,connect error please try agian";
+"error.connect.auth.tip"="Sorry,authentication failed please check your account and password";
+"error.login.tip" = "Sorry,login error please try agian";
+"error.request.tip" = "Sorry,the network is error";
+
+"error.register.identity" = "The identity has registed";
+"error.register.exists" = "Sorry,the informaction you post does not exists";
+
+"error.profile.tip" = "The update profile fail";
+
+
+"setting.title" = "Settings";
+"setting.switch.nickname" = "Use Nick";
+"setting.switch.receipts" = "Receipts";
+"setting.title.login" = "Login";
+"setting.title.chat" = "Chat";
+
+
+"login.title" = "Login";
+"login.label.current.icd" = "Account";
+"login.label.current.icd.placeholder" = "Login name";
+"login.label.current.name" = "Your Name";
+"login.label.current.name.placeholder" = "Your name";
+"login.label.current.pwd" = "Password";
+"login.label.current.pwd.placeholder" = "Login password";
+"login.label.current.server" = "Server";
+"login.label.current.server.placeholder" = "Server Address";
+"login.label.current.port" = "Port";
+"login.label.current.port.placeholder" = "Use port";
+"login.label.current.nickname" = "Nick Name";
+"login.label.current.nickname.placeholder" = "Nick name";
+
+"register.title.icd" = "Check Identity";
+"register.title" = "Register Account";
+"register.label.icd" = "Identity";
+"register.label.icd.placeholder" = "User identity";
+"register.label.pwd" = "Password";
+"register.label.pwd.placeholder" = "Use password";
+"register.label.name" = "Name";
+"register.label.name.placeholder" = "Please input name";
+"register.label.sex" = "Gender";
+"register.label.sex.placeholder" = "Please select gender";
+"register.label.major" = "Discipline";
+"register.label.major.placeholder" = "Please input discipline";
+"register.label.org" = "Complany";
+"register.label.org.placeholder" = "Please input complany";
+"register.label.model" = "Model";
+"register.label.model.placeholder" = "Please input model";
+"register.label.city" = "City";
+"register.label.city.placeholder" = "Please input city";
+"register.label.sign" = "Sign";
+"register.label.sign.placeholder" = "Please input sign";
+"register.label.purpose" = "Purpose";
+"register.label.purpose.placeholder" = "Please input purpose";
+"register.label.email" = "Email";
+"register.label.email.placeholder" = "Please input email";
+"register.label.mobile" = "Mobile";
+"register.label.mobile.placeholder" = "Please input mobile";
+"register.label.img" = "Photo";
+"register.label.img.placeholder" = "Please input photo";
+
+"voice.title" = "Speek Now";
+"profile.title" = "Profile";
+"profile.search.title" = "Profile search";
+
+"find.title" = "Find";
+"favorite.title" = "Favorites";
+"friends.title" = "Friends";
+"attention.title" = "Attentions";
+"fans.title" = "Fans";
+"blacklist.title" = "Blacklist";
+
+"chat.title" = "Chats";
+"chat.setting.title" = "Chat setting";
+
+"group.title" = "Groups";
+"group.setting.title" = "Group setting";
+
+"select.title" = "Select";
+
+

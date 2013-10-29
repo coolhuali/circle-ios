@@ -1,0 +1,128 @@
+/* 
+  Localizable.strings
+  Circle
+
+  Created by admin on 13-9-28.
+  Copyright (c) 2013年 icss. All rights reserved.
+*/
+"login.error.tip" = "登录失败，请重试";
+"register.error.unsupport" = "很抱歉，该应用未开放用户注册";
+"previous" = "上一个";
+"next" = "下一个";
+"done" = "完成";
+"ok" = "确定";
+"menu"="菜单";
+"cancel" = "取消";
+"retake" = "重新选择";
+"reply" = "回复";
+"move_and_scale"="移动和缩放";
+"choose_photo" = "选择照片";
+"take_photo_from_camera" = "相机中拍摄";
+"take_photo_from_library" = "图片库中选择";
+
+"time.now.title" = "刚才";
+"time.today.title" = "今天";
+"time.yesterday.title" = "昨天";
+"time.beforeyesterday.title" = "前天";
+"time.minute.title" = "分钟";
+"time.hour.title" = "小时";
+
+"action.login" = "登录";
+"action.title" = "您可以进行以下操作";
+"action.fav" = "收藏";
+"action.sub" = "关注";
+"action.friend" = "邀请好友";
+"action.black" = "黑名单";
+"action.del" = "删除";
+"action.remove" = "移除";
+"action.message" = "发送消息";
+
+"tip.loading" = "正在加载中";
+"tip.loadmore" = "加载更多";
+"tip.release.refresh" = "松开执行刷新";
+"tip.pull.refresh" = "下拉准备刷新";
+"tip.release.loadmore" = "松开执行加载更多";
+"tip.pull.loadmore" = "上推准备加载更多";
+
+"error.title" = "错误提示";
+"error.load.tip" = "加载数据失败";
+"error.connect.tip" = "很抱歉,您当前的网络不能连接到服务器，请检查";
+"error.connect.register.tip" = "很抱歉,注册失败请重试";
+"error.connect.auth.tip"="很抱歉,登录认证失败，请确认账号密码";
+"error.login.tip" = "很抱歉,登录失败请重试";
+"error.request.tip" = "很抱歉，您的网络连接出现错误，请检查";
+
+"error.register.title" = "注册错误";
+"error.register.identity" = "身份证号已被注册";
+"error.register.exists" = "很抱歉，您提交的信息有误，拒绝您的注册";
+
+"error.profile.tip" = "很抱歉，更新个人信息错误";
+
+"setting.title" = "设置";
+"setting.switch.nickname" = "使用昵称";
+"setting.switch.receipts" = "使用回执";
+"setting.title.login" = "登录";
+"setting.title.chat" = "会话";
+
+"login.title" = "登录";
+"login.label.current.icd" = "帐号";
+"login.label.current.icd.placeholder" = "请登录帐号";
+"login.label.current.name" = "姓名";
+"login.label.current.name.placeholder" = "请输入姓名";
+"login.label.current.pwd" = "密码";
+"login.label.current.pwd.placeholder" = "登录密码";
+"login.label.current.server" = "服务器";
+"login.label.current.server.placeholder" = "服务器地址";
+"login.label.current.port" = "端口";
+"login.label.current.port.placeholder" = "连接端口";
+"login.label.current.nickname" = "昵称";
+"login.label.current.nickname.placeholder" = "显示昵称";
+
+"register.title.icd" = "身份验证";
+"register.title" = "注册帐号";
+"register.label.icd" = "身份证号";
+"register.label.icd.placeholder" = "真实身份证号";
+"register.label.pwd" = "密码";
+"register.label.pwd.placeholder" = "请输入密码";
+"register.label.name" = "姓名";
+"register.label.name.placeholder" = "请输入姓名";
+"register.label.sex" = "性别";
+"register.label.sex.placeholder" = "请选择性别";
+"register.label.major" = "专业";
+"register.label.major.placeholder" = "请输入专业";
+"register.label.org" = "公司";
+"register.label.org.placeholder" = "请输入公司";
+"register.label.model" = "机型";
+"register.label.model.placeholder" = "请输入公司";
+"register.label.city" = "城市";
+"register.label.city.placeholder" = "请输入城市";
+"register.label.sign" = "签名";
+"register.label.sign.placeholder" = "请输入签名";
+"register.label.purpose" = "目的";
+"register.label.purpose.placeholder" = "请输入应用目的";
+"register.label.email" = "邮箱";
+"register.label.email.placeholder" = "请输入邮箱";
+"register.label.mobile" = "手机号";
+"register.label.mobile.placeholder" = "请输入手机号";
+"register.label.img" = "头像";
+"register.label.img.placeholder" = "请选择头像";
+
+"voice.title" = "开始录音";
+"profile.title" = "个人档案";
+"profile.search.title" = "查找设置";
+
+"find.title" = "找人";
+"favorite.title" = "收藏";
+"friends.title" = "好友";
+"attention.title" = "关注";
+"fans.title" = "粉丝";
+"blacklist.title" = "黑名单";
+
+"chat.title" = "会话";
+"chat.setting.title" = "会话设置";
+
+"group.title" = "小组";
+"group.setting.title" = "小组设置";
+
+"select.title" = "选择";
+
