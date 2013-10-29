@@ -341,6 +341,7 @@
 		1A8A4B5418191C5600FCDEBA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A4B5118191C5600FCDEBA /* MBProgressHUD.m */; };
 		1A8A4B5718191CD000FCDEBA /* SDWebImageManager+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A4B5618191CD000FCDEBA /* SDWebImageManager+MJ.m */; };
 		1AC3505417FD234E008F75E8 /* ChatSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3505217FD234E008F75E8 /* ChatSelectionView.m */; };
+		1AC56F6E181FB0D000C5BA69 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1AC56F6D181FB0D000C5BA69 /* README */; };
 		1ADA32E718150E8A003D44DB /* ImageSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA32E618150E8A003D44DB /* ImageSourceViewController.m */; };
 		1ADA32F61815133B003D44DB /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA32EF1815133B003D44DB /* backButton.png */; };
 		1ADA32F71815133B003D44DB /* backButtonHL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA32F01815133B003D44DB /* backButtonHL.png */; };
@@ -970,6 +971,7 @@
 		1A8A4B5618191CD000FCDEBA /* SDWebImageManager+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageManager+MJ.m"; sourceTree = "<group>"; };
 		1AC3505217FD234E008F75E8 /* ChatSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSelectionView.m; sourceTree = "<group>"; };
 		1AC3505317FD234E008F75E8 /* ChatSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSelectionView.h; sourceTree = "<group>"; };
+		1AC56F6D181FB0D000C5BA69 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		1ADA32E518150E8A003D44DB /* ImageSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSourceViewController.h; sourceTree = "<group>"; };
 		1ADA32E618150E8A003D44DB /* ImageSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSourceViewController.m; sourceTree = "<group>"; };
 		1ADA32EF1815133B003D44DB /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
@@ -1062,6 +1064,7 @@
 				1A6BE32217F6FE46006C1BF8 /* OpenFramework */,
 				1A6BE30317F6FC77006C1BF8 /* Frameworks */,
 				1A6BE30217F6FC77006C1BF8 /* Products */,
+				1AC56F6D181FB0D000C5BA69 /* README */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2162,11 +2165,11 @@
 				1A6BE67117F71268006C1BF8 /* MAppStrings.h */,
 				1A6BE5F117F7115C006C1BF8 /* MBaseModel.h */,
 				1A6BE5F217F7115C006C1BF8 /* MBaseModel.m */,
+				1A5AB43F17FEA3360095C7B2 /* MRosterInfo.h */,
+				1A5AB44017FEA3360095C7B2 /* MRosterInfo.m */,
 				1A6BE5F317F7115C006C1BF8 /* OFC */,
 				1A6BE60417F7115C006C1BF8 /* Profiles */,
 				1A6BE60917F7115C006C1BF8 /* Relations */,
-				1A5AB43F17FEA3360095C7B2 /* MRosterInfo.h */,
-				1A5AB44017FEA3360095C7B2 /* MRosterInfo.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2499,6 +2502,7 @@
 				1A6BE66917F7115C006C1BF8 /* backgound.jpg in Resources */,
 				1A6BE66A17F7115C006C1BF8 /* blueButton.jpg in Resources */,
 				1A6BE66B17F7115C006C1BF8 /* blueButton_x.png in Resources */,
+				1AC56F6E181FB0D000C5BA69 /* README in Resources */,
 				1ADCBB0C17FAD47700BAA9B3 /* Text.png in Resources */,
 				1A6BE66C17F7115C006C1BF8 /* deletbutton.png in Resources */,
 				1AF085791818F32B00B82F81 /* avatar@2x.jpg in Resources */,
