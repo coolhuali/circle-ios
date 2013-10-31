@@ -45,14 +45,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [super showMenuItem];
     mProfile = [MProfileInfo alloc];
     [self.settingsTableView setDataSource:self];
-    [self.settingsTableView setDelegate:self]; 
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"menu", nil)
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:(DEMONavigationController *)self.navigationController
-                                                                            action:@selector(showMenu)];
+    [self.settingsTableView setDelegate:self];
 	// Do any additional setup after loading the view.
     [self myProfile];
     if(!isRegister){

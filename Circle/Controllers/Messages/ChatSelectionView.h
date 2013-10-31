@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define CHAT_BUTTON_SIZE 70
+#define INSETS 10
+
 @protocol ShareMoreDelegate <NSObject>
 
 @optional

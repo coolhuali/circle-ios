@@ -32,9 +32,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ChatSelectionView.h"
 #define INPUT_HEIGHT 45.0f
-#define KEY_BOARD_HEIGHT 216.0f
 @interface MessageInputView : UIImageView<UITextViewDelegate>
 
 @property (strong, nonatomic) UITextView *textView;
@@ -42,11 +40,9 @@
 @property (strong, nonatomic) UIButton *attachedButton;
 @property (strong, nonatomic) UIButton *soundButton;
 @property (strong, nonatomic) UIButton *faceButton;
-@property (strong, nonatomic) ChatSelectionView *shareMoreView; 
 
 #pragma mark - Message input view
 + (CGFloat)textViewLineHeight;
 + (CGFloat)maxLines;
 + (CGFloat)maxHeight;
-- (void)changeSelectButton:(UIButton *)sender;
 @end

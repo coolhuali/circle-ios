@@ -30,4 +30,5 @@
 @property (nonatomic,strong)  UIToolbar *keyboardToolbar;
 @property (nonatomic,strong) UITableView *settingsTableView;
 -(void)setUIAccessoryView:(UIView *)target;
+-(void)showMenuItem;
 @end

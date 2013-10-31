@@ -8,6 +8,7 @@
 
 #import "BaseFormViewController.h"
 #import "UIView+AnimationOptionsForCurve.h"
+#import "DEMONavigationController.h"
 
 #define INPUT_HEIGHT 60.0f
 @interface BaseFormViewController ()
@@ -19,6 +20,15 @@
 @synthesize settingsTableView;
 @synthesize currentTextField;
 @synthesize keyboardToolbar;
+
+-(void)showMenuItem{
+    if(self.navigationController.navigationBar.backItem == nil){
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"menu", nil)
+                                                                                 style:UIBarButtonItemStylePlain
+                                                                                target:(DEMONavigationController *)self.navigationController
+                                                                                action:@selector(showMenu)];
+    }
+}
 
 - (void)viewDidLoad
 {

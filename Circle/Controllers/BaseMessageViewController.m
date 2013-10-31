@@ -19,14 +19,14 @@
 #define FRAME_ORIGIN_Y self.view.frame.origin.y
 
 @interface BaseMessageViewController (){
+    ChatSelectionView *shareMoreView;
     MessageInputView *toolBar;
     NSString *_myJID;
     MMessageInfo* mMessage;
     POVoiceHUD* voiceHud;
     NSMutableArray *tempMessages;
     BOOL IS_KEY_BOARD_SHOW;
-    BOOL IS_SELECT_AREA;
-    float toolBar_Y;
+    float LINE_KEY_BOARD_SHOW;
 }
 @property (assign, nonatomic) CGFloat previousTextViewContentHeight;
 @end
@@ -41,21 +41,16 @@
         isGrouping = isGroup;
     }
     return self;
-} 
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
     self.loadMoreEnabled = NO;
     [self setupHeader];
     [self setupInput];
     [self setupVoice];
     tempMessages = [[NSMutableArray alloc] init];
-    if(self.navigationController.navigationBar.backItem == nil){
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"menu", nil)
-                                                                                 style:UIBarButtonItemStylePlain
-                                                                                target:(DEMONavigationController *)self.navigationController
-                                                                                action:@selector(showMenu)];
-    }
     
     _myJID = [MLoginInfo getActiveUserId];
     self.title = [MBaseModel getNameCache:targetJID];
@@ -95,14 +90,21 @@
 {
     CGSize size = self.view.frame.size;
     CGRect inputFrame = CGRectMake(0.0f, size.height - INPUT_HEIGHT, size.width, INPUT_HEIGHT);
-    toolBar_Y = inputFrame.origin.y;
+    
     toolBar = [[MessageInputView alloc] initWithFrame:inputFrame];
     toolBar.textView.returnKeyType = UIReturnKeySend;
     toolBar.textView.delegate = self;
-    toolBar.shareMoreView.delegate = self;
     [toolBar.soundButton addTarget:self action:@selector(soundPressed:) forControlEvents:UIControlEventTouchUpInside];
     [toolBar.attachedButton addTarget:self action:@selector(attachedPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:toolBar];
+    
+    shareMoreView =[[ChatSelectionView alloc]init];
+    [shareMoreView setBackgroundColor:[UIColor lightGrayColor]];
+    shareMoreView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    //[shareMoreView setFrame:CGRectMake(0.0f,toolBar.frame.origin.y+toolBar.frame.size.height, toolBar.frame.size.width, KEY_BOARD_HEIGHT)];
+    shareMoreView.delegate = self;
+    
+    [self.view addSubview:shareMoreView];
     
 }
 
@@ -163,46 +165,32 @@
 }
 - (void)tableTabRecognizer:(UIGestureRecognizer *)guestureRecognizer
 {
-    float y = self.view.frame.origin.y;
-    if(!IS_KEY_BOARD_SHOW && y<0){
-        [self resizeFrame:KEY_BOARD_HEIGHT];
-    }
+    [self resizeFrame:NO deltaY:0];
     [toolBar.textView resignFirstResponder];
 }
 
 - (void) completeSendMessage{
     [MessageSoundEffect playMessageSentSound];
     [toolBar.textView setText:nil];
-    [self textViewDidChange:toolBar.textView];
+    self.previousTextViewContentHeight = [MessageInputView textViewLineHeight];
+    [self resizeFrame:IS_KEY_BOARD_SHOW deltaY:0];
 }
 - (void) resetToolBar{
-    [toolBar.textView setInputView:nil];
     [toolBar.textView setText:nil];
-    self.previousTextViewContentHeight = toolBar.textView.contentSize.height;
-    [toolBar changeSelectButton:toolBar.attachedButton];
-    [self textViewDidChange:toolBar.textView];
+    self.previousTextViewContentHeight = [MessageInputView textViewLineHeight];
     [toolBar.textView resignFirstResponder];
-}
-- (void) resetToolBarUnSetButton{
-    [toolBar.textView setInputView:nil];
-    [toolBar.textView setText:nil];
-    self.previousTextViewContentHeight = toolBar.textView.contentSize.height;
-    [self textViewDidChange:toolBar.textView];
-    [toolBar.textView resignFirstResponder];
+    [self resizeFrame:IS_KEY_BOARD_SHOW deltaY:0];
+    [self scrollToBottomAnimated:YES];
 }
 - (void)soundPressed:(UIButton *)sender{
-    [self resetToolBarUnSetButton];
+    [self resetToolBar];
     [voiceHud startForFilePath:[NSString stringWithFormat:@"%@/Documents/%lu.caf", NSHomeDirectory(),(long)[[NSDate date] timeIntervalSince1970]]];
 }
 - (void)attachedPressed:(UIButton *)sender{
-    [toolBar.textView setInputView:nil];
     [toolBar.textView setText:nil];
-    [toolBar.textView reloadInputViews];
     [toolBar.textView resignFirstResponder];
-    if(FRAME_ORIGIN_Y==0){
-        [self resizeFrame:-KEY_BOARD_HEIGHT];
-    }
-    IS_SELECT_AREA = YES;
+    [self resizeFrame:YES deltaY:0];
+    [self scrollToBottomAnimated:YES];
 }
 - (void) pickImageHandle:(BRImagePickerViewControllerType) sourceType{
     BRImagePickerViewController *imagePicker = [[BRImagePickerViewController alloc] init];
@@ -213,7 +201,6 @@
         [item setObject:@"image" forKey:@"type"];
         [item setObject:imageData forKey:@"content"];
         [items addObject:item];
-        [self resetToolBar];
         [self.tableView reloadData];
         [self scrollToBottomAnimated:YES];
     };
@@ -305,7 +292,6 @@
     [browser show];
 }
 - (void)viewMessageUserProfile:(NSString *)profileId{
-    [self resetToolBarUnSetButton];
     UIViewController *controller = [[UserProfileViewController alloc] initWithProfileId:profileId sourceType:@"chat"];
     if(profileId == _myJID){
         controller = [[MyProfileViewController alloc] init];
@@ -323,7 +309,6 @@
     [item setObject:@"sound" forKey:@"type"];
     [item setObject:recordPath forKey:@"content"];
     [items addObject:item];
-    [self resetToolBarUnSetButton];
     [self.tableView reloadData];
     [self scrollToBottomAnimated:YES];
     voiceHUD.alpha = 0.0;
@@ -552,30 +537,15 @@
 
 - (void)textViewDidChange:(UITextView *)textView
 {
-    IS_SELECT_AREA = NO;
     CGFloat maxHeight = [MessageInputView maxHeight];
     CGFloat textViewContentHeight = textView.contentSize.height;
     CGFloat changeInHeight = textViewContentHeight - self.previousTextViewContentHeight;
+    NSLog(@"maxHeight max:%f,txt:%f,prev:%f,ch:%f",maxHeight,textViewContentHeight,self.previousTextViewContentHeight,changeInHeight);
     changeInHeight = (textViewContentHeight + changeInHeight >= maxHeight) ? 0.0f : changeInHeight;
     if(changeInHeight != 0.0f) {
-        [UIView animateWithDuration:0.25f
-                         animations:^{
-                             UIEdgeInsets insets = UIEdgeInsetsMake(0.0f, 0.0f, self.tableView.contentInset.bottom + changeInHeight, 0.0f);
-                             self.tableView.contentInset = insets;
-                             self.tableView.scrollIndicatorInsets = insets;
-                             
-                             [self scrollToBottomAnimated:NO];
-                             
-                             CGRect inputViewFrame = toolBar.frame;
-                             toolBar.frame = CGRectMake(0.0f,
-                                                               inputViewFrame.origin.y - changeInHeight,
-                                                               inputViewFrame.size.width,
-                                                               inputViewFrame.size.height + changeInHeight);
-                         }
-                         completion:^(BOOL finished) {
-                         }];
-        
         self.previousTextViewContentHeight = MIN(textViewContentHeight, maxHeight);
+        float delay = toolBar.frame.size.height+changeInHeight-INPUT_HEIGHT;
+        [self resizeFrame:YES deltaY:delay];
     }
 }
 
@@ -601,45 +571,49 @@
 #pragma mark - Keyboard notifications
 - (void)handleWillShowKeyboard:(NSNotification *)notification
 {
-    if(IS_SELECT_AREA && FRAME_ORIGIN_Y<0){
-        [self resizeFrame:KEY_BOARD_HEIGHT];
+    float deltaY = 0.0f;
+    if(IS_KEY_BOARD_SHOW){
+        //获取到键盘frame 变化之前的frame
+        NSValue *keyboardBeginBounds=[[notification userInfo]objectForKey:UIKeyboardFrameBeginUserInfoKey];
+        CGRect beginRect=[keyboardBeginBounds CGRectValue];
+        
+        //获取到键盘frame变化之后的frame
+        NSValue *keyboardEndBounds=[[notification userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey];
+        
+        CGRect endRect=[keyboardEndBounds CGRectValue];
+        deltaY=beginRect.origin.y-endRect.origin.y;
+        if(deltaY==36)LINE_KEY_BOARD_SHOW = deltaY;
     }
     IS_KEY_BOARD_SHOW = YES;
-    [self changeKeyBoard:notification];
+    [self resizeFrame:IS_KEY_BOARD_SHOW deltaY:0];
 }
 
 - (void)handleWillHideKeyboard:(NSNotification *)notification
 {
     IS_KEY_BOARD_SHOW = NO;
-    [self changeKeyBoard:notification];
+    LINE_KEY_BOARD_SHOW = 0;
+    [self resizeFrame:IS_KEY_BOARD_SHOW deltaY:0];
 }
-
-#pragma mark ----键盘高度变化------
--(void)changeKeyBoard:(NSNotification *)aNotifacation
-{
-    //获取到键盘frame 变化之前的frame
-    NSValue *keyboardBeginBounds=[[aNotifacation userInfo]objectForKey:UIKeyboardFrameBeginUserInfoKey];
-    CGRect beginRect=[keyboardBeginBounds CGRectValue];
-    
-    //获取到键盘frame变化之后的frame
-    NSValue *keyboardEndBounds=[[aNotifacation userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey];
-    
-    CGRect endRect=[keyboardEndBounds CGRectValue];
-    CGFloat deltaY=endRect.origin.y-beginRect.origin.y;
-    //拿frame变化之后的origin.y-变化之前的origin.y，其差值(带正负号)就是我们self.view的y方向上的增量
-    [self resizeFrame:deltaY];
-    
-}
-- (void)resizeFrame:(float)deltaY
+- (void)resizeFrame:(BOOL)isShow deltaY:(float)deltaY
 {
     NSLog(@"deltaY:%f",deltaY);
-    //[UIView animateWithDuration:0.5f
-     //                animations:^{
-                         [self.view setFrame:CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y+deltaY, self.view.frame.size.width, self.view.frame.size.height)];
-                         [self.tableView setContentInset:UIEdgeInsetsMake(self.tableView.contentInset.top-deltaY, 0, 0, 0)];
-   //                  }
- //                    completion:^(BOOL finished) {
-                     
- //                    }];
+    CGSize size = self.view.frame.size;
+    
+    //[UIView animateWithDuration:0.25f
+    //                 animations:^{
+    if(isShow){
+        self.tableView.frame = CGRectMake(0.0f, 0.0f,size.width, size.height - INPUT_HEIGHT - KEY_BOARD_HEIGHT - LINE_KEY_BOARD_SHOW);
+    }else{
+        self.tableView.frame = CGRectMake(0.0f, 0.0f,size.width, size.height - INPUT_HEIGHT);
+    }
+    self.tableView.frame = CGRectMake(0.0f, 0.0f,size.width, self.tableView.frame.size.height - deltaY);
+    toolBar.frame = CGRectMake(0.0f, self.tableView.frame.origin.y + self.tableView.frame.size.height, size.width, INPUT_HEIGHT+deltaY);
+    [shareMoreView setFrame:CGRectMake(0.0f,toolBar.frame.origin.y+toolBar.frame.size.height, toolBar.frame.size.width, KEY_BOARD_HEIGHT)];
+    NSLog(@"tableView frame x:%f,y:%f,w:%f,h:%f",self.tableView.frame.origin.x,self.tableView.frame.origin.y,self.tableView.frame.size.width,self.tableView.frame.size.height);
+    NSLog(@"toolBar frame x:%f,y:%f,w:%f,h:%f",toolBar.frame.origin.x,toolBar.frame.origin.y,toolBar.frame.size.width,toolBar.frame.size.height);
+    NSLog(@"shareMoreView frame x:%f,y:%f,w:%f,h:%f",shareMoreView.frame.origin.x,shareMoreView.frame.origin.y,shareMoreView.frame.size.width,shareMoreView.frame.size.height);
+    //                 }
+    //                 completion:^(BOOL finished) {
+    //                 }];
 }
 @end

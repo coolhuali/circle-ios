@@ -31,17 +31,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [super showMenuItem];
     mLogin = [MLoginInfo alloc];
     
     nameSetting = [[OFCStringSetting alloc]initWithText:@"login.label.current.icd" placeholder:@"login.label.current.icd.placeholder"];
     pwdSetting = [[OFCStringSetting alloc]initWithText:@"login.label.current.pwd"  placeholder:@"login.label.current.pwd.placeholder"];
     
     formItems = [[OFCSettingsGroup alloc] initWithTitle:@"login.title" settings:[NSArray arrayWithObjects:nameSetting,pwdSetting, nil]];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"menu", nil)
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:(DEMONavigationController *)self.navigationController
-                                                                            action:@selector(showMenu)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"action.login", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(nextStep:)];
     
     [self.settingsTableView setDataSource:self];

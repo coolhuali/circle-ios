@@ -58,22 +58,22 @@
         _label3=[[UILabel alloc]initWithFrame:CGRectZero];
         _label4=[[UILabel alloc]initWithFrame:CGRectZero];
         
-        [_label1 setFont:[UIFont systemFontOfSize:15]];
+        [_label1 setFont:[UIFont systemFontOfSize:12]];
         [_label1 setTextColor:[UIColor grayColor]];
         [_label1 setBackgroundColor:[UIColor clearColor]];
         [_label1 setTextAlignment:UITextAlignmentCenter];
         
-        [_label2 setFont:[UIFont systemFontOfSize:15]];
+        [_label2 setFont:[UIFont systemFontOfSize:12]];
         [_label2 setTextColor:[UIColor grayColor]];
         [_label2 setBackgroundColor:[UIColor clearColor]];
         [_label2 setTextAlignment:UITextAlignmentCenter];
         
-        [_label3 setFont:[UIFont systemFontOfSize:15]];
+        [_label3 setFont:[UIFont systemFontOfSize:12]];
         [_label3 setTextColor:[UIColor grayColor]];
         [_label3 setBackgroundColor:[UIColor clearColor]];
         [_label3 setTextAlignment:UITextAlignmentCenter];
         
-        [_label4 setFont:[UIFont systemFontOfSize:15]];
+        [_label4 setFont:[UIFont systemFontOfSize:12]];
         [_label4 setTextColor:[UIColor grayColor]];
         [_label4 setBackgroundColor:[UIColor clearColor]];
         [_label4 setTextAlignment:UITextAlignmentCenter];

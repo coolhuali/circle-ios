@@ -342,6 +342,7 @@
 		1A8A4B5718191CD000FCDEBA /* SDWebImageManager+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A4B5618191CD000FCDEBA /* SDWebImageManager+MJ.m */; };
 		1AC3505417FD234E008F75E8 /* ChatSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3505217FD234E008F75E8 /* ChatSelectionView.m */; };
 		1AC56F6E181FB0D000C5BA69 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1AC56F6D181FB0D000C5BA69 /* README */; };
+		1AC56F711820F05700C5BA69 /* MessageToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC56F701820F05700C5BA69 /* MessageToolBarView.m */; };
 		1ADA32E718150E8A003D44DB /* ImageSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA32E618150E8A003D44DB /* ImageSourceViewController.m */; };
 		1ADA32F61815133B003D44DB /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA32EF1815133B003D44DB /* backButton.png */; };
 		1ADA32F71815133B003D44DB /* backButtonHL.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA32F01815133B003D44DB /* backButtonHL.png */; };
@@ -972,6 +973,8 @@
 		1AC3505217FD234E008F75E8 /* ChatSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSelectionView.m; sourceTree = "<group>"; };
 		1AC3505317FD234E008F75E8 /* ChatSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSelectionView.h; sourceTree = "<group>"; };
 		1AC56F6D181FB0D000C5BA69 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		1AC56F6F1820F05700C5BA69 /* MessageToolBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageToolBarView.h; sourceTree = "<group>"; };
+		1AC56F701820F05700C5BA69 /* MessageToolBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageToolBarView.m; sourceTree = "<group>"; };
 		1ADA32E518150E8A003D44DB /* ImageSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageSourceViewController.h; sourceTree = "<group>"; };
 		1ADA32E618150E8A003D44DB /* ImageSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageSourceViewController.m; sourceTree = "<group>"; };
 		1ADA32EF1815133B003D44DB /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
@@ -1951,9 +1954,10 @@
 				1A6BE59B17F7115C006C1BF8 /* BubbleView.h */,
 				1A6BE59C17F7115C006C1BF8 /* BubbleView.m */,
 				1A6BE59D17F7115C006C1BF8 /* ImageViewCell.h */,
-				1A6BE59E17F7115C006C1BF8 /* ImageViewCell.m */,
 				1A6BE59F17F7115C006C1BF8 /* MessageInputView.h */,
 				1A6BE5A017F7115C006C1BF8 /* MessageInputView.m */,
+				1AC56F6F1820F05700C5BA69 /* MessageToolBarView.h */,
+				1AC56F701820F05700C5BA69 /* MessageToolBarView.m */,
 				1A6BE5A117F7115C006C1BF8 /* MessageSoundEffect.h */,
 				1A6BE5A217F7115C006C1BF8 /* MessageSoundEffect.m */,
 				1A6BE5A317F7115C006C1BF8 /* MessagesViewController.h */,
@@ -1964,11 +1968,12 @@
 				1A6BE5A817F7115C006C1BF8 /* POPMessageViewController.m */,
 				1A6BE5A917F7115C006C1BF8 /* ProgressIndicator.h */,
 				1A6BE5AA17F7115C006C1BF8 /* ProgressIndicator.m */,
-				1A6BE5AB17F7115C006C1BF8 /* Resources */,
+				1A6BE59E17F7115C006C1BF8 /* ImageViewCell.m */,
 				1A6BE5C117F7115C006C1BF8 /* SoundViewCell.h */,
+				1A6BE5AB17F7115C006C1BF8 /* Resources */,
 				1A6BE5C217F7115C006C1BF8 /* SoundViewCell.m */,
-				1A6BE5C317F7115C006C1BF8 /* UIView+AnimationOptionsForCurve.h */,
 				1A6BE5C417F7115C006C1BF8 /* UIView+AnimationOptionsForCurve.m */,
+				1A6BE5C317F7115C006C1BF8 /* UIView+AnimationOptionsForCurve.h */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -2688,6 +2693,7 @@
 				1A6BE56D17F70CD9006C1BF8 /* BRAlbumListViewController.m in Sources */,
 				1A6BE56E17F70CD9006C1BF8 /* BRAlbumPickerViewController.m in Sources */,
 				1A6BE56F17F70CD9006C1BF8 /* BRCameraPickerViewController.m in Sources */,
+				1AC56F711820F05700C5BA69 /* MessageToolBarView.m in Sources */,
 				1A8A4B4918191C0100FCDEBA /* MJPhotoProgressView.m in Sources */,
 				1A6BE57017F70CD9006C1BF8 /* BRCameraView.m in Sources */,
 				1A6BE57117F70CD9006C1BF8 /* BRCroppeView.m in Sources */,

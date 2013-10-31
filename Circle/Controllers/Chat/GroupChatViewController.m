@@ -12,6 +12,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [super showMenuItem];
 }
 - (void)didReceiveMemoryWarning
 {

@@ -7,10 +7,11 @@
 //
 
 #import "BaseListViewController.h" 
-#import "MessageInputView.h"
+#import "MessageToolBarView.h"
 #import "MessageSoundEffect.h"
 #import "POVoiceHUD.h"
 #import "CustomMessageCell.h"
+#import "ChatSelectionView.h"
 #import "UIView+AnimationOptionsForCurve.h" 
 
 

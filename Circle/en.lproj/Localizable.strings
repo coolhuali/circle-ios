@@ -93,7 +93,7 @@
 "register.label.sex.placeholder" = "Please select gender";
 "register.label.major" = "Discipline";
 "register.label.major.placeholder" = "Please input discipline";
-"register.label.org" = "Complany";
+"register.label.org" = "Company";
 "register.label.org.placeholder" = "Please input complany";
 "register.label.model" = "Model";
 "register.label.model.placeholder" = "Please input model";

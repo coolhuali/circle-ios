@@ -20,5 +20,5 @@
     int page;
 }
 @property (strong, nonatomic) NSMutableArray *items;
-
+-(void)showMenuItem;
 @end

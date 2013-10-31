@@ -1,20 +1,20 @@
 目录介绍：
 Circle：app主目录
-     MainFrame－主窗口view
-     Controllers－视图界面
+     MainFrame——主窗口view
+     Controllers——视图界面
               BaseListViewController.h——带下拉刷新和上推加在更多的视图基类，如果有这类功能要求的都继承至该类
               BaseFormViewController.h——带表单控件的视图基类
               BaseMessageViewController.h——消息对话话视图基类，如使用于ChatViewController和GroupChatViewController
-              Chat－对话视图
-              Message－消息视图
-              OFC－来自网络开源消息视图
-              Profile－档案信息视图
-              Relations－关系视图
+              Chat——对话视图
+              Message——消息视图
+              OFC——来自网络开源消息视图（例子参照将来会删除）
+              Profile——档案信息视图
+              Relations——关系视图
      Views——其他自定义视图元素存放目录
             Cells——给UITableView使用自定义的UITableViewCell
      Models——数据模型的定义类存放目录
            MBaseModel.h——数据模型基类，封装了http的get post put delete请求，使用回调的方式调用
-           OFC——openfire消息管理的模型
+           OFC——openfire消息管理的模型（例子参照将来会删除）
            Profiles——用户档案信息模型类
            Relations——关系信息模型类
 OpenFramework——第三方开源组件使用

@@ -56,10 +56,6 @@
     self.title = NSLocalizedString(@"profile.title", nil);
     [self.settingsTableView setDataSource:self];
     [self.settingsTableView setDelegate:self];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"menu", nil)
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:(DEMONavigationController *)self.navigationController
-                                                                            action:@selector(showMenu)];
     [self loadProfileInfo:_profileId];
 }
 - (void) viewDidUnload

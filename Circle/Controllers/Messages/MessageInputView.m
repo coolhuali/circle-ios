@@ -68,15 +68,13 @@
     [self setupTextView];
     //[self setupFaceButton];
     [self setupAttachedButton];
-    [self setupAttachedArea];
     
 } 
 - (void)setupTextView
 {
     CGFloat width = ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) ? 246.0f : 690.0f;
     CGFloat height = [MessageInputView textViewLineHeight] * [MessageInputView maxLines];
-    
-    self.textView = [[UITextView alloc] initWithFrame:CGRectMake(46.0f, 6.0f, width-15, height)];
+    self.textView = [[UITextView alloc] initWithFrame:CGRectMake(46.0f, 6.0f, width-15,height)];
     self.textView.autocapitalizationType = UITextAutocapitalizationTypeNone;
     self.textView.autoresizingMask = UIViewAutoresizingFlexibleWidth |UIViewAutoresizingFlexibleHeight;
     self.textView.backgroundColor = [UIColor whiteColor];
@@ -186,24 +184,15 @@
 }
 
 
-- (void)setupAttachedArea
-{
-    self.shareMoreView =[[ChatSelectionView alloc]init];
-    [self.shareMoreView setBackgroundColor:[UIColor grayColor]];
-    [self.shareMoreView setFrame:CGRectMake(0, INPUT_HEIGHT, self.frame.size.width, KEY_BOARD_HEIGHT)];
-    self.shareMoreView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-    [self addSubview:self.shareMoreView];
-    
-}
 #pragma mark - Message input view
 + (CGFloat)textViewLineHeight
 {
-    return 35.0f; // for fontSize 15.0f
+    return 36.0f; // for fontSize 15.0f
 }
 
 + (CGFloat)maxLines
 {
-    return ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) ? 4.0f : 8.0f;
+    return ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) ? 3.0f : 7.0f;
 }
 
 + (CGFloat)maxHeight

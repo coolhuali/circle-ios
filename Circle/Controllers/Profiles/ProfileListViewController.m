@@ -29,16 +29,13 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    [super showMenuItem];
     mProfile = [MProfileInfo alloc];
     mRelation = [MRelationFavorite alloc ];
     self.title = NSLocalizedString(@"find.title", nil);
     [self setupHeader];
     [self setupFooter];
-    [self doSearchItems];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"menu", nil)
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:(DEMONavigationController *)self.navigationController
-                                                                            action:@selector(showMenu)];
+    [self doSearchItems]; 
     [self refresh];
 }
 - (void) viewWillAppear:(BOOL)animated{
