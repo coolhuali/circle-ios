@@ -11,6 +11,7 @@
 #import "SearchProfileViewController.h"
 #import "MProfileInfo.h"
 #import "MRelationFavorite.h"
+#import "OFCXMPPManager.h"
 
 @interface ProfilePhotoViewController (){
     MProfileInfo *mProfile;
@@ -46,7 +47,10 @@
     [self setupHeader];
     [self setupFooter];
     [self doSearchItems];
-    [self refresh];
+    if([[OFCXMPPManager sharedManager] hasAuthed])
+    {
+        [self refresh];
+    }
 }
 - (void)authSuccess:(NSNotification*)notification
 {

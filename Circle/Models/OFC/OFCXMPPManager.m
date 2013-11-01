@@ -627,7 +627,10 @@ static OFCXMPPManager *sharedManager = nil;
     [[NSNotificationCenter defaultCenter]
      postNotificationName:kOFCServerConnectFail object:self];
 }
-
+- (BOOL)hasAuthed
+{
+    return isAuthed;
+}
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender
 {
 	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
@@ -635,6 +638,7 @@ static OFCXMPPManager *sharedManager = nil;
         if(hasError)return;
         [MLoginInfo setActiveUserPwd:password];
         [MLoginInfo setActiveUserId:[myJID user] completed:^(NSObject *result, BOOL hasError) {
+            isAuthed=YES;
             [[NSNotificationCenter defaultCenter]
              postNotificationName:kOFCServerAuthedSuccess object:self];
         }];

@@ -42,6 +42,7 @@
     
     NSString *password;
     BOOL isXmppConnected;
+    BOOL isAuthed;
     
     BOOL allowSelfSignedCertificates;
 	BOOL allowSSLHostNameMismatch;
@@ -65,8 +66,10 @@
 @property (nonatomic, readonly) XMPPCapabilities *xmppCapabilities;
 @property (nonatomic, readonly) XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
 @property (nonatomic, readonly) XMPPRoomCoreDataStorage *xmppRoomDataStorage;
-@property (nonatomic, strong) XMPPJID *myJID; 
+@property (nonatomic, strong) XMPPJID *myJID;
+
 + (OFCXMPPManager *)sharedManager;
+- (BOOL)hasAuthed;
 - (BOOL)hasSetting;
 - (BOOL)connect:(NSString *)jid pwd:(NSString *)pwd;
 - (BOOL)anoymousConnection;

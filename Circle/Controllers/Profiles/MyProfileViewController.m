@@ -11,8 +11,11 @@
 #import "MLoginInfo.h"
 #import "MProfileInfo.h"
 #import "MRelationFavorite.h"
+#import "MJPhotoBrowser.h"
+#import "MJPhoto.h"
 
 @interface MyProfileViewController(){
+    NSDictionary *curProfile;
     MProfileInfo *mProfile;
     BOOL isRegister;
     OFCValueSetting *pwdSetting;
@@ -56,6 +59,7 @@
             if(hasError)return;
             NSDictionary * data  = (NSDictionary *)result;
             if(data !=nil){
+                curProfile = data;
                 self.title = [data objectForKey:@"name"];
                 [MLoginInfo setMyProfileInfo:data];
                 [settingsTableView reloadData];
@@ -177,21 +181,40 @@
         setting.delegate = self;
         if([setting isKindOfClass:[OFCImageSetting class]]){
             self.imageCell = cell;
-            UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(whenClickImage)];
-            [cell addGestureRecognizer:singleTap];
         }
         isFirst = YES;
 	}
     cell.ofcSetting = setting;
     if(isFirst && cell.accessoryView){
         [self setUIAccessoryView:cell.accessoryView];
+        [cell.accessoryView setUserInteractionEnabled:YES];
+        UITapGestureRecognizer *singleImageViewTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewPhotoInfo)];
+        [cell.accessoryView addGestureRecognizer:singleImageViewTap];
     }
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row==0){
+        [self whenClickImage];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 - (UITableView *) targetViewer
 {
     return settingsTableView;
+}
+-(void)viewPhotoInfo{
+    
+    NSMutableArray *photos = [NSMutableArray arrayWithCapacity:1];
+    MJPhoto *photo = [[MJPhoto alloc] init];
+    photo.url = [NSURL URLWithString:[NSString stringWithFormat:API_DOWN_IMAGE_URL,[curProfile objectForKey:@"img" ]]];
+    [photos addObject:photo];
+    MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
+    browser.currentPhotoIndex = 0;
+    browser.photos = photos;
+    [browser show];
 }
 -(void)whenClickImage
 { 
@@ -211,12 +234,6 @@
     }
     
     [choosePhotoActionSheet showInView:self.view];
-}
-#pragma mark -
-#pragma mark UITableView delegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - UIActionSheetDelegate

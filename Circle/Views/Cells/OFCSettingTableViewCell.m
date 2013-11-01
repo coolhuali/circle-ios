@@ -77,6 +77,7 @@
             ui = (UIImageView *)self.accessoryView;
         }else {
             ui = [[UIImageView alloc] initWithFrame:CGRectMake(90, 0,90, 90)];
+            ui.userInteractionEnabled = YES;
             //[ui.layer setCornerRadius:IMAGE_RADIUS];
         }
         if(stringSetting.value){

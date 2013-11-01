@@ -24,6 +24,8 @@
 #import "MRelationFans.h"
 #import "MRelationFriends.h"
 #import "MLoginInfo.h"
+#import "MJPhotoBrowser.h"
+#import "MJPhoto.h"
 
 @interface UserProfileViewController(){
     NSDictionary *curProfile;
@@ -193,11 +195,14 @@
 
 -(void)whenClickImage
 {
-    NSArray *bImages = [NSArray arrayWithObjects:[NSString stringWithFormat:API_DOWN_IMAGE_URL,[curProfile objectForKey:@"img" ]],
-                       nil];
-    ImageSourceViewController *control = [[ImageSourceViewController alloc] initWithbigImageUrls:bImages smallImageUrls:nil];
-    [control setImageIndex:0];
-    [self presentViewController:control animated:YES completion:nil];
+    NSMutableArray *photos = [NSMutableArray arrayWithCapacity:1];
+    MJPhoto *photo = [[MJPhoto alloc] init];
+    photo.url = [NSURL URLWithString:[NSString stringWithFormat:API_DOWN_IMAGE_URL,[curProfile objectForKey:@"img" ]]];
+    [photos addObject:photo];
+    MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
+    browser.currentPhotoIndex = 0;
+    browser.photos = photos;
+    [browser show];
 }
 - (UITableView *) targetViewer
 {
