@@ -340,6 +340,7 @@
 		1A8A4B5318191C5600FCDEBA /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A4B4F18191C5600FCDEBA /* MBProgressHUD.bundle */; };
 		1A8A4B5418191C5600FCDEBA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A4B5118191C5600FCDEBA /* MBProgressHUD.m */; };
 		1A8A4B5718191CD000FCDEBA /* SDWebImageManager+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A4B5618191CD000FCDEBA /* SDWebImageManager+MJ.m */; };
+		1A91E1571827491900C9C78E /* GroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A91E1561827491900C9C78E /* GroupListViewController.m */; };
 		1AC3505417FD234E008F75E8 /* ChatSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3505217FD234E008F75E8 /* ChatSelectionView.m */; };
 		1AC56F6E181FB0D000C5BA69 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1AC56F6D181FB0D000C5BA69 /* README */; };
 		1AC56F711820F05700C5BA69 /* MessageToolBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC56F701820F05700C5BA69 /* MessageToolBarView.m */; };
@@ -970,6 +971,8 @@
 		1A8A4B5118191C5600FCDEBA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1A8A4B5518191CD000FCDEBA /* SDWebImageManager+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDWebImageManager+MJ.h"; sourceTree = "<group>"; };
 		1A8A4B5618191CD000FCDEBA /* SDWebImageManager+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageManager+MJ.m"; sourceTree = "<group>"; };
+		1A91E1551827491900C9C78E /* GroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupListViewController.h; sourceTree = "<group>"; };
+		1A91E1561827491900C9C78E /* GroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupListViewController.m; sourceTree = "<group>"; };
 		1AC3505217FD234E008F75E8 /* ChatSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatSelectionView.m; sourceTree = "<group>"; };
 		1AC3505317FD234E008F75E8 /* ChatSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatSelectionView.h; sourceTree = "<group>"; };
 		1AC56F6D181FB0D000C5BA69 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
@@ -1922,6 +1925,7 @@
 		1A6BE59517F7115C006C1BF8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A91E154182748E800C9C78E /* Group */,
 				1ADA32EE1815133B003D44DB /* Images */,
 				1A6BE67C17F7136C006C1BF8 /* UIHelper.h */,
 				1A6BE67B17F7136C006C1BF8 /* UIHelper.m */,
@@ -2324,6 +2328,15 @@
 				1A8A4B5118191C5600FCDEBA /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		1A91E154182748E800C9C78E /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				1A91E1551827491900C9C78E /* GroupListViewController.h */,
+				1A91E1561827491900C9C78E /* GroupListViewController.m */,
+			);
+			path = Group;
 			sourceTree = "<group>";
 		};
 		1ADA32EE1815133B003D44DB /* Images */ = {
@@ -2761,6 +2774,7 @@
 				1A6BE66517F7115C006C1BF8 /* MRelationFriends.m in Sources */,
 				1A6BE66617F7115C006C1BF8 /* BJGridItem.m in Sources */,
 				1A6BE66717F7115C006C1BF8 /* BUPOViewController.m in Sources */,
+				1A91E1571827491900C9C78E /* GroupListViewController.m in Sources */,
 				1A14A5CB18071AF5001AFCF6 /* RegisterFirstViewController.m in Sources */,
 				1A6BE67817F7134B006C1BF8 /* GroupChatViewController.m in Sources */,
 				1A6BE67917F7134B006C1BF8 /* GroupSettingViewController.m in Sources */,
