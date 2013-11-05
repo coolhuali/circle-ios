@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "DDLog.h"
 #import "DDTTYLogger.h"
-
+#import "ContainerViewController.h"
 
 #import "OFCBuddyListViewController.h"
 #import "OFCChatRoomListViewController.h"
@@ -28,6 +28,7 @@
     UIView *messageNotificationView;
 }
 @property (strong, nonatomic) UIView *messageNotificationView;
+@property (strong,nonatomic)ContainerViewController *containerViewController;
 @end
 // Log levels: off, error, warn, info, verbose
 #if DEBUG
@@ -204,7 +205,13 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     // Make it a root controller
     //
-    self.window.rootViewController = frostedViewController;
+//    self.window.rootViewController = frostedViewController;
+    UIViewController *mainVC = frostedViewController;
+    
+    UIViewController *subVC = [[UIViewController alloc]init];//[self.storyboard
+    
+    self.containerViewController = [[ContainerViewController alloc]initWithBaseViewController:mainVC andFirst:subVC];
+    [self.window setRootViewController:self.containerViewController];
 }
 
 

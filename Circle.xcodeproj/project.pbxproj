@@ -383,6 +383,8 @@
 		1AF085751818EC6C00B82F81 /* DEMONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF085731818EC6C00B82F81 /* DEMONavigationController.m */; };
 		1AF085771818EE9C00B82F81 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF085761818EE9C00B82F81 /* Accelerate.framework */; };
 		1AF085791818F32B00B82F81 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF085781818F32B00B82F81 /* avatar@2x.jpg */; };
+		B487E80118287B3400B95A93 /* ACPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B487E7FE18287B3400B95A93 /* ACPButton.m */; };
+		B487E80218287B3400B95A93 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B487E80018287B3400B95A93 /* ContainerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1028,6 +1030,10 @@
 		1AF085731818EC6C00B82F81 /* DEMONavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONavigationController.m; sourceTree = "<group>"; };
 		1AF085761818EE9C00B82F81 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		1AF085781818F32B00B82F81 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
+		B487E7FD18287B3400B95A93 /* ACPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPButton.h; sourceTree = "<group>"; };
+		B487E7FE18287B3400B95A93 /* ACPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPButton.m; sourceTree = "<group>"; };
+		B487E7FF18287B3400B95A93 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		B487E80018287B3400B95A93 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1071,6 +1077,7 @@
 				1A6BE30317F6FC77006C1BF8 /* Frameworks */,
 				1A6BE30217F6FC77006C1BF8 /* Products */,
 				1AC56F6D181FB0D000C5BA69 /* README */,
+				B487E7FC18287B3400B95A93 /* PanButton */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2373,6 +2380,17 @@
 			path = REFrostedViewController;
 			sourceTree = "<group>";
 		};
+		B487E7FC18287B3400B95A93 /* PanButton */ = {
+			isa = PBXGroup;
+			children = (
+				B487E7FD18287B3400B95A93 /* ACPButton.h */,
+				B487E7FE18287B3400B95A93 /* ACPButton.m */,
+				B487E7FF18287B3400B95A93 /* ContainerViewController.h */,
+				B487E80018287B3400B95A93 /* ContainerViewController.m */,
+			);
+			path = PanButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2660,6 +2678,7 @@
 				1A6BE4A017F6FE5F006C1BF8 /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
 				1A6BE4A117F6FE5F006C1BF8 /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
 				1A6BE4A217F6FE5F006C1BF8 /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
+				B487E80218287B3400B95A93 /* ContainerViewController.m in Sources */,
 				1A6BE4A317F6FE5F006C1BF8 /* XMPPMessageArchiving.m in Sources */,
 				1A6BE4A417F6FE5F006C1BF8 /* XMPPvCardAvatarModule.m in Sources */,
 				1A6BE4A517F6FE5F006C1BF8 /* XMPPMessage+XEP_0184.m in Sources */,
@@ -2770,6 +2789,7 @@
 				1A6BE66117F7115C006C1BF8 /* MRelationAttention.m in Sources */,
 				1A6BE66217F7115C006C1BF8 /* MRelationBlacklist.m in Sources */,
 				1A6BE66317F7115C006C1BF8 /* MRelationFans.m in Sources */,
+				B487E80118287B3400B95A93 /* ACPButton.m in Sources */,
 				1A6BE66417F7115C006C1BF8 /* MRelationFavorite.m in Sources */,
 				1A6BE66517F7115C006C1BF8 /* MRelationFriends.m in Sources */,
 				1A6BE66617F7115C006C1BF8 /* BJGridItem.m in Sources */,
