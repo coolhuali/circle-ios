@@ -9,7 +9,10 @@
 #import "AppDelegate.h"
 #import "DDLog.h"
 #import "DDTTYLogger.h"
+//**按钮拉出透明视图**zc**//
 #import "ContainerViewController.h"
+#import "ZCResearchViewController.h"
+//****//
 
 #import "OFCBuddyListViewController.h"
 #import "OFCChatRoomListViewController.h"
@@ -205,13 +208,17 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
     
     // Make it a root controller
     //
-//    self.window.rootViewController = frostedViewController;
+
+
+//**按钮拉出透明视图**zc**//
+    //    self.window.rootViewController = frostedViewController;
     UIViewController *mainVC = frostedViewController;
     
-    UIViewController *subVC = [[UIViewController alloc]init];//[self.storyboard
-    
+    ZCResearchViewController *subVC = [[ZCResearchViewController alloc]init];//[self.storyboard
+
     self.containerViewController = [[ContainerViewController alloc]initWithBaseViewController:mainVC andFirst:subVC];
     [self.window setRootViewController:self.containerViewController];
+    //****//
 }
 
 

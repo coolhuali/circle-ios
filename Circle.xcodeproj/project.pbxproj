@@ -383,8 +383,15 @@
 		1AF085751818EC6C00B82F81 /* DEMONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF085731818EC6C00B82F81 /* DEMONavigationController.m */; };
 		1AF085771818EE9C00B82F81 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF085761818EE9C00B82F81 /* Accelerate.framework */; };
 		1AF085791818F32B00B82F81 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF085781818F32B00B82F81 /* avatar@2x.jpg */; };
+		B4194703182CFB0F004712AC /* ZCObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = B4194700182CFB0F004712AC /* ZCObjects.m */; };
+		B4194704182CFB0F004712AC /* ZCResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4194702182CFB0F004712AC /* ZCResearchViewController.m */; };
 		B487E80118287B3400B95A93 /* ACPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B487E7FE18287B3400B95A93 /* ACPButton.m */; };
 		B487E80218287B3400B95A93 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B487E80018287B3400B95A93 /* ContainerViewController.m */; };
+		B4A16DC9182DD0190016A57E /* CCSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A16DC8182DD0190016A57E /* CCSegmentedControl.m */; };
+		B4A16DCB182DD51A0016A57E /* segment_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A16DCA182DD51A0016A57E /* segment_bg.png */; };
+		B4A16DCD182DD52B0016A57E /* stain.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A16DCC182DD52B0016A57E /* stain.png */; };
+		B4A16DDA182DE89B0016A57E /* ADD.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A16DD9182DE89B0016A57E /* ADD.png */; };
+		B4A16DDD182DF95C0016A57E /* ZCLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A16DDC182DF95C0016A57E /* ZCLocationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1030,10 +1037,21 @@
 		1AF085731818EC6C00B82F81 /* DEMONavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONavigationController.m; sourceTree = "<group>"; };
 		1AF085761818EE9C00B82F81 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		1AF085781818F32B00B82F81 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
+		B41946FF182CFB0F004712AC /* ZCObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCObjects.h; sourceTree = "<group>"; };
+		B4194700182CFB0F004712AC /* ZCObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCObjects.m; sourceTree = "<group>"; };
+		B4194701182CFB0F004712AC /* ZCResearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCResearchViewController.h; sourceTree = "<group>"; };
+		B4194702182CFB0F004712AC /* ZCResearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCResearchViewController.m; sourceTree = "<group>"; };
 		B487E7FD18287B3400B95A93 /* ACPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPButton.h; sourceTree = "<group>"; };
 		B487E7FE18287B3400B95A93 /* ACPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPButton.m; sourceTree = "<group>"; };
 		B487E7FF18287B3400B95A93 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
 		B487E80018287B3400B95A93 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		B4A16DC7182DD0190016A57E /* CCSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSegmentedControl.h; sourceTree = "<group>"; };
+		B4A16DC8182DD0190016A57E /* CCSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSegmentedControl.m; sourceTree = "<group>"; };
+		B4A16DCA182DD51A0016A57E /* segment_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segment_bg.png; sourceTree = "<group>"; };
+		B4A16DCC182DD52B0016A57E /* stain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stain.png; sourceTree = "<group>"; };
+		B4A16DD9182DE89B0016A57E /* ADD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADD.png; sourceTree = "<group>"; };
+		B4A16DDB182DF95C0016A57E /* ZCLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLocationView.h; sourceTree = "<group>"; };
+		B4A16DDC182DF95C0016A57E /* ZCLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2383,10 +2401,21 @@
 		B487E7FC18287B3400B95A93 /* PanButton */ = {
 			isa = PBXGroup;
 			children = (
+				B4A16DD9182DE89B0016A57E /* ADD.png */,
+				B4A16DCC182DD52B0016A57E /* stain.png */,
+				B4A16DCA182DD51A0016A57E /* segment_bg.png */,
+				B4A16DC7182DD0190016A57E /* CCSegmentedControl.h */,
+				B4A16DC8182DD0190016A57E /* CCSegmentedControl.m */,
+				B41946FF182CFB0F004712AC /* ZCObjects.h */,
+				B4194700182CFB0F004712AC /* ZCObjects.m */,
+				B4194701182CFB0F004712AC /* ZCResearchViewController.h */,
+				B4194702182CFB0F004712AC /* ZCResearchViewController.m */,
 				B487E7FD18287B3400B95A93 /* ACPButton.h */,
 				B487E7FE18287B3400B95A93 /* ACPButton.m */,
 				B487E7FF18287B3400B95A93 /* ContainerViewController.h */,
 				B487E80018287B3400B95A93 /* ContainerViewController.m */,
+				B4A16DDB182DF95C0016A57E /* ZCLocationView.h */,
+				B4A16DDC182DF95C0016A57E /* ZCLocationView.m */,
 			);
 			path = PanButton;
 			sourceTree = "<group>";
@@ -2459,6 +2488,7 @@
 				1A6BE31B17F6FC77006C1BF8 /* Default-568h@2x.png in Resources */,
 				1A6BE47117F6FE5F006C1BF8 /* README.txt in Resources */,
 				1A5AB46517FEE0DD0095C7B2 /* ToolViewEmotionHL@2x.png in Resources */,
+				B4A16DCD182DD52B0016A57E /* stain.png in Resources */,
 				1A6BE47617F6FE5F006C1BF8 /* build-libidn.sh in Resources */,
 				1A6BE4DE17F70026006C1BF8 /* microphone.png in Resources */,
 				1ADCBB0B17FAD47700BAA9B3 /* Speak@2x.png in Resources */,
@@ -2468,6 +2498,7 @@
 				1A6BE57217F70CD9006C1BF8 /* BRCameraPickerViewController.xib in Resources */,
 				1A5AB46217FEE0DD0095C7B2 /* ToolViewInputVoice@2x.png in Resources */,
 				1A6BE57317F70CD9006C1BF8 /* camera-device.png in Resources */,
+				B4A16DDA182DE89B0016A57E /* ADD.png in Resources */,
 				1A6BE57417F70CD9006C1BF8 /* camera-device@2x.png in Resources */,
 				1ADCBB0D17FAD47700BAA9B3 /* Text@2x.png in Resources */,
 				1ADCBB0817FAD47700BAA9B3 /* InputBack.png in Resources */,
@@ -2522,6 +2553,7 @@
 				1A6BE63917F7115C006C1BF8 /* messageBubbleTyping@2x.png in Resources */,
 				1A6BE63A17F7115C006C1BF8 /* send-highlighted.png in Resources */,
 				1A6BE63B17F7115C006C1BF8 /* send-highlighted@2x.png in Resources */,
+				B4A16DCB182DD51A0016A57E /* segment_bg.png in Resources */,
 				1A4DFFFB17FBEC2D007D74D4 /* VOIPSenderVoiceNodeBkgHL@2x.png in Resources */,
 				1A6BE63C17F7115C006C1BF8 /* send.png in Resources */,
 				1A6BE63D17F7115C006C1BF8 /* send@2x.png in Resources */,
@@ -2604,6 +2636,7 @@
 				1A6BE45C17F6FE5F006C1BF8 /* XMPPRoster.xcdatamodel in Sources */,
 				1A6BE45D17F6FE5F006C1BF8 /* XMPPRosterCoreDataStorage.m in Sources */,
 				1AC3505417FD234E008F75E8 /* ChatSelectionView.m in Sources */,
+				B4A16DDD182DF95C0016A57E /* ZCLocationView.m in Sources */,
 				1A6BE45E17F6FE5F006C1BF8 /* XMPPUserCoreDataStorageObject.m in Sources */,
 				1A6BE45F17F6FE5F006C1BF8 /* XMPPResourceMemoryStorageObject.m in Sources */,
 				1A6BE46017F6FE5F006C1BF8 /* XMPPRosterMemoryStorage.m in Sources */,
@@ -2625,6 +2658,7 @@
 				1AF0856E1818EB7A00B82F81 /* UIView+REFrostedViewController.m in Sources */,
 				1A6BE46F17F6FE5F006C1BF8 /* ContextFilterLogFormatter.m in Sources */,
 				1A6BE47017F6FE5F006C1BF8 /* DispatchQueueLogFormatter.m in Sources */,
+				B4194703182CFB0F004712AC /* ZCObjects.m in Sources */,
 				1A6BE47217F6FE5F006C1BF8 /* NSString+DDXML.m in Sources */,
 				1A6BE47317F6FE5F006C1BF8 /* DDXMLDocument.m in Sources */,
 				1A6BE47417F6FE5F006C1BF8 /* DDXMLElement.m in Sources */,
@@ -2785,10 +2819,12 @@
 				1A6BE65D17F7115C006C1BF8 /* OFCStringSetting.m in Sources */,
 				1A6BE65E17F7115C006C1BF8 /* OFCValueSetting.m in Sources */,
 				1A6BE65F17F7115C006C1BF8 /* MLoginInfo.m in Sources */,
+				B4194704182CFB0F004712AC /* ZCResearchViewController.m in Sources */,
 				1A6BE66017F7115C006C1BF8 /* MProfileInfo.m in Sources */,
 				1A6BE66117F7115C006C1BF8 /* MRelationAttention.m in Sources */,
 				1A6BE66217F7115C006C1BF8 /* MRelationBlacklist.m in Sources */,
 				1A6BE66317F7115C006C1BF8 /* MRelationFans.m in Sources */,
+				B4A16DC9182DD0190016A57E /* CCSegmentedControl.m in Sources */,
 				B487E80118287B3400B95A93 /* ACPButton.m in Sources */,
 				1A6BE66417F7115C006C1BF8 /* MRelationFavorite.m in Sources */,
 				1A6BE66517F7115C006C1BF8 /* MRelationFriends.m in Sources */,

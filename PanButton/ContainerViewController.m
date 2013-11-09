@@ -5,14 +5,14 @@
 //  Created by Heather Snepenger on 9/17/12.
 //
 //
-
+//**按钮推走主屏**//
 #import "ContainerViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "ACPButton.h"
 
 #define DEFAULT_SHADOW_WIDTH    -3.0       //影宽
 #define DEFAULT_SHADOW_HEIGHT   0.5        //影高
-#define DEFAULT_SHADOW_OPACITY  0.5        //影透度
+#define DEFAULT_SHADOW_OPACITY  0.9        //影透度
 #define MYBUTTON_TITLE          @"标题"     //按钮标题
 #define MYBUTTON_ORINGI_X       SCREEM_WIDTH-MYBUTTONANDFVIEWDIC      //按钮初始位置x
 #define MYBUTTON_ORINGI_Y       77       //按钮初始位置y
@@ -260,7 +260,7 @@ static CGRect size;
         {
             [self.mybutton setCenter:CGPointMake(location.x, self.mybutton.center.y)];
             [self.firstLayerView setFrame:CGRectMake(self.mybutton.frame.origin.x+MYBUTTONANDFVIEWDIC,0,SCREEM_WIDTH,[self screenHeight])];
-            [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
+ //**按钮推走主屏**//           [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
         }
 
 
@@ -281,7 +281,7 @@ static CGRect size;
                                         options:UIViewAnimationOptionCurveEaseOut
                                      animations:^{
                                          self.firstLayerView.frame = CGRectMake(290, 0, SCREEM_WIDTH, [self screenHeight]);
-                                         [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
+//**按钮推走主屏**//                                         [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
                                          self.mybutton.frame=CGRectMake(290-MYBUTTONANDFVIEWDIC, self.mybutton.frame.origin.y, MYBUTTON_ORINGI_WIDTH, MYBUTTON_ORINGI_HIGHT);
                                      }
                                      completion:^(BOOL finished){
@@ -289,7 +289,7 @@ static CGRect size;
                                          [UIView animateWithDuration:0.15
                                                           animations:^{
                                                               self.firstLayerView.frame = CGRectMake(FIRSTVIEW_START_X, 0, SCREEM_WIDTH, [self screenHeight]);
-                                                              [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
+    //**按钮推走主屏**//                                                          [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
                                                               self.mybutton.frame=CGRectMake(MYBUTTON_ORINGI_X, self.mybutton.frame.origin.y, MYBUTTON_ORINGI_WIDTH, MYBUTTON_ORINGI_HIGHT);
                                                           }
                                                           completion:^(BOOL finished){
@@ -308,7 +308,7 @@ static CGRect size;
                                         options:UIViewAnimationOptionCurveEaseOut
                                      animations:^{
                                          self.firstLayerView.frame = CGRectMake(FIRSTVIEW_START_X, 0, SCREEM_WIDTH, [self screenHeight]);
-                                         [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
+          //**按钮推走主屏**//                               [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
                                      }
                                      completion:^(BOOL finished){
                                      }];
@@ -325,7 +325,7 @@ static CGRect size;
                                     options:UIViewAnimationOptionCurveEaseOut
                                  animations:^{
                                      self.firstLayerView.frame = CGRectMake(FIRSTVIEW_FINAL_X, 0, SCREEM_WIDTH, [self screenHeight]);
-                                     [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
+                 //**按钮推走主屏**//                    [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
                                      self.mybutton.frame=CGRectMake(0, self.mybutton.frame.origin.y, MYBUTTON_ORINGI_WIDTH, MYBUTTON_ORINGI_HIGHT);
 
                                  }
@@ -350,7 +350,7 @@ static CGRect size;
                                  animations:^{
 
                                      self.firstLayerView.frame = CGRectMake(290, 0, SCREEM_WIDTH, [self screenHeight]);
-                                     [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
+                          //**按钮推走主屏**//           [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
                                      self.mybutton.frame=CGRectMake(290-MYBUTTONANDFVIEWDIC, self.mybutton.frame.origin.y, MYBUTTON_ORINGI_WIDTH, MYBUTTON_ORINGI_HIGHT);
                                  }
                                  completion:^(BOOL finished){
@@ -360,7 +360,7 @@ static CGRect size;
                                                          options:UIViewAnimationOptionCurveEaseOut
                                                       animations:^{
                                                           self.firstLayerView.frame = CGRectMake(FIRSTVIEW_START_X, 0, SCREEM_WIDTH, [self screenHeight]);
-                                                          [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
+                   //**按钮推走主屏**//                                       [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
                                                           self.mybutton.frame=CGRectMake(MYBUTTON_ORINGI_X, self.mybutton.frame.origin.y, MYBUTTON_ORINGI_WIDTH, MYBUTTON_ORINGI_HIGHT);
                                                       }
                                                       completion:^(BOOL finished){
@@ -380,7 +380,7 @@ static CGRect size;
                                  animations:^{
 
                                      self.firstLayerView.frame = CGRectMake(FIRSTVIEW_START_X, 0, SCREEM_WIDTH, [self screenHeight]);
-                                     [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
+                  //**按钮推走主屏**//                   [self.mainView setFrame:CGRectMake(self.firstLayerView.frame.origin.x-SCREEM_WIDTH, self.mainView.frame.origin.y, self.mainView.frame.size.width, self.mainView.frame.size.height)];
                                      self.mybutton.frame=CGRectMake(MYBUTTON_ORINGI_X, self.mybutton.frame.origin.y, MYBUTTON_ORINGI_WIDTH, MYBUTTON_ORINGI_HIGHT);
                                  }
                                  completion:^(BOOL finished){
