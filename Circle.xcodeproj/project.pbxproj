@@ -383,6 +383,10 @@
 		1AF085751818EC6C00B82F81 /* DEMONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF085731818EC6C00B82F81 /* DEMONavigationController.m */; };
 		1AF085771818EE9C00B82F81 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF085761818EE9C00B82F81 /* Accelerate.framework */; };
 		1AF085791818F32B00B82F81 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF085781818F32B00B82F81 /* avatar@2x.jpg */; };
+		B40A254518307DD40030C562 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = B40A254418307DD40030C562 /* area.plist */; };
+		B40A2553183095490030C562 /* POPDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40A2552183095490030C562 /* POPDViewController.m */; };
+		B40A25581830A34D0030C562 /* POPDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B40A25561830A34D0030C562 /* POPDCell.m */; };
+		B40A255C183220310030C562 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = B40A255B183220310030C562 /* up.png */; };
 		B4194703182CFB0F004712AC /* ZCObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = B4194700182CFB0F004712AC /* ZCObjects.m */; };
 		B4194704182CFB0F004712AC /* ZCResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4194702182CFB0F004712AC /* ZCResearchViewController.m */; };
 		B487E80118287B3400B95A93 /* ACPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B487E7FE18287B3400B95A93 /* ACPButton.m */; };
@@ -391,7 +395,6 @@
 		B4A16DCB182DD51A0016A57E /* segment_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A16DCA182DD51A0016A57E /* segment_bg.png */; };
 		B4A16DCD182DD52B0016A57E /* stain.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A16DCC182DD52B0016A57E /* stain.png */; };
 		B4A16DDA182DE89B0016A57E /* ADD.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A16DD9182DE89B0016A57E /* ADD.png */; };
-		B4A16DDD182DF95C0016A57E /* ZCLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A16DDC182DF95C0016A57E /* ZCLocationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1037,6 +1040,12 @@
 		1AF085731818EC6C00B82F81 /* DEMONavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONavigationController.m; sourceTree = "<group>"; };
 		1AF085761818EE9C00B82F81 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		1AF085781818F32B00B82F81 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
+		B40A254418307DD40030C562 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		B40A2551183095490030C562 /* POPDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDViewController.h; sourceTree = "<group>"; };
+		B40A2552183095490030C562 /* POPDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDViewController.m; sourceTree = "<group>"; };
+		B40A25551830A34D0030C562 /* POPDCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDCell.h; sourceTree = "<group>"; };
+		B40A25561830A34D0030C562 /* POPDCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDCell.m; sourceTree = "<group>"; };
+		B40A255B183220310030C562 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
 		B41946FF182CFB0F004712AC /* ZCObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCObjects.h; sourceTree = "<group>"; };
 		B4194700182CFB0F004712AC /* ZCObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCObjects.m; sourceTree = "<group>"; };
 		B4194701182CFB0F004712AC /* ZCResearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCResearchViewController.h; sourceTree = "<group>"; };
@@ -1050,8 +1059,6 @@
 		B4A16DCA182DD51A0016A57E /* segment_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segment_bg.png; sourceTree = "<group>"; };
 		B4A16DCC182DD52B0016A57E /* stain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stain.png; sourceTree = "<group>"; };
 		B4A16DD9182DE89B0016A57E /* ADD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADD.png; sourceTree = "<group>"; };
-		B4A16DDB182DF95C0016A57E /* ZCLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLocationView.h; sourceTree = "<group>"; };
-		B4A16DDC182DF95C0016A57E /* ZCLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLocationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2401,6 +2408,8 @@
 		B487E7FC18287B3400B95A93 /* PanButton */ = {
 			isa = PBXGroup;
 			children = (
+				B40A254418307DD40030C562 /* area.plist */,
+				B40A255B183220310030C562 /* up.png */,
 				B4A16DD9182DE89B0016A57E /* ADD.png */,
 				B4A16DCC182DD52B0016A57E /* stain.png */,
 				B4A16DCA182DD51A0016A57E /* segment_bg.png */,
@@ -2414,8 +2423,10 @@
 				B487E7FE18287B3400B95A93 /* ACPButton.m */,
 				B487E7FF18287B3400B95A93 /* ContainerViewController.h */,
 				B487E80018287B3400B95A93 /* ContainerViewController.m */,
-				B4A16DDB182DF95C0016A57E /* ZCLocationView.h */,
-				B4A16DDC182DF95C0016A57E /* ZCLocationView.m */,
+				B40A25551830A34D0030C562 /* POPDCell.h */,
+				B40A25561830A34D0030C562 /* POPDCell.m */,
+				B40A2551183095490030C562 /* POPDViewController.h */,
+				B40A2552183095490030C562 /* POPDViewController.m */,
 			);
 			path = PanButton;
 			sourceTree = "<group>";
@@ -2540,6 +2551,7 @@
 				1A6BE63417F7115C006C1BF8 /* messageBubbleGray.png in Resources */,
 				1A5AB45517FEE0DD0095C7B2 /* sharemore_wxtalk@2x.png in Resources */,
 				1A6BE63517F7115C006C1BF8 /* messageBubbleGray@2x.png in Resources */,
+				B40A254518307DD40030C562 /* area.plist in Resources */,
 				1ADCBB0217FAD47700BAA9B3 /* face.png in Resources */,
 				1ADA32F81815133B003D44DB /* backImage.png in Resources */,
 				1A6BE63617F7115C006C1BF8 /* messageBubbleHighlighted.png in Resources */,
@@ -2553,6 +2565,7 @@
 				1A6BE63917F7115C006C1BF8 /* messageBubbleTyping@2x.png in Resources */,
 				1A6BE63A17F7115C006C1BF8 /* send-highlighted.png in Resources */,
 				1A6BE63B17F7115C006C1BF8 /* send-highlighted@2x.png in Resources */,
+				B40A255C183220310030C562 /* up.png in Resources */,
 				B4A16DCB182DD51A0016A57E /* segment_bg.png in Resources */,
 				1A4DFFFB17FBEC2D007D74D4 /* VOIPSenderVoiceNodeBkgHL@2x.png in Resources */,
 				1A6BE63C17F7115C006C1BF8 /* send.png in Resources */,
@@ -2636,7 +2649,6 @@
 				1A6BE45C17F6FE5F006C1BF8 /* XMPPRoster.xcdatamodel in Sources */,
 				1A6BE45D17F6FE5F006C1BF8 /* XMPPRosterCoreDataStorage.m in Sources */,
 				1AC3505417FD234E008F75E8 /* ChatSelectionView.m in Sources */,
-				B4A16DDD182DF95C0016A57E /* ZCLocationView.m in Sources */,
 				1A6BE45E17F6FE5F006C1BF8 /* XMPPUserCoreDataStorageObject.m in Sources */,
 				1A6BE45F17F6FE5F006C1BF8 /* XMPPResourceMemoryStorageObject.m in Sources */,
 				1A6BE46017F6FE5F006C1BF8 /* XMPPRosterMemoryStorage.m in Sources */,
@@ -2764,6 +2776,7 @@
 				1A6BE57017F70CD9006C1BF8 /* BRCameraView.m in Sources */,
 				1A6BE57117F70CD9006C1BF8 /* BRCroppeView.m in Sources */,
 				1A6BE57D17F70CD9006C1BF8 /* BRImagePickerViewController.m in Sources */,
+				B40A25581830A34D0030C562 /* POPDCell.m in Sources */,
 				1A6BE57E17F70CD9006C1BF8 /* BRPreviewViewController.m in Sources */,
 				1A6BE58017F70CD9006C1BF8 /* BRTouchFreeView.m in Sources */,
 				1A6BE58317F70D53006C1BF8 /* BRProgressIndicator.m in Sources */,
@@ -2836,6 +2849,7 @@
 				1A6BE67917F7134B006C1BF8 /* GroupSettingViewController.m in Sources */,
 				1A6BE67D17F7136C006C1BF8 /* UIHelper.m in Sources */,
 				1A6BE68017F71466006C1BF8 /* OFCXMPPManager.m in Sources */,
+				B40A2553183095490030C562 /* POPDViewController.m in Sources */,
 				1A6BE68717F715BE006C1BF8 /* OFCChatroom.m in Sources */,
 				1A6BE68817F715BE006C1BF8 /* OFCChatMessage.m in Sources */,
 				1A6BE68917F715BE006C1BF8 /* OFCBuddy.m in Sources */,

@@ -8,17 +8,22 @@
 
 #import "ZCResearchViewController.h"
 #import "ZCObjects.h"
-#import "ZCLocationView.h"
+#import "POPDViewController.h"
 #import <QuartzCore/QuartzCore.h>
-//#import "HMSegmentedControl.h"
 #define KBREAK_LABELS 40
 #define KRECT_TITLE  80,60,100,25
-#define KRECT_LOCATIONVIEW 320, 220, 160, 100
+#define KRECT_LOCATIONVIEW 200, 220, 60, 100
 #define KTAG_LABELS 1000
 #define KTAG_SEGMENT 2000
 //@class ZCLabels;
-@interface ZCResearchViewController ()
+@interface ZCResearchViewController ()<POPDDelegate>
 {
+    CGFloat yypaixu;
+    CGFloat yyrole;
+    CGFloat yysex;
+    CGFloat yylocation;
+    CGFloat yyquanzi;
+    NSMutableArray *arrayAllCities;
     NSMutableArray *arraylabeltxt;
     NSMutableArray *arraysegmentpaicutxt;
     NSMutableArray *arraysegmentroletxt;
@@ -31,6 +36,8 @@
 @property ZCSegmentControl *segpaixubook;
 @property ZCSegmentControl *segrolebook;
 @property ZCSegmentControl *segsexbook;
+@property ZCLabels *loclabel;
+@property POPDViewController  *locationview;
 @end
 
 @implementation ZCResearchViewController
@@ -47,6 +54,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    UITapGestureRecognizer *tapbackgtound=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapbackground:)];
+//    [self.view addGestureRecognizer:tapbackgtound];
+    _loclabel=[[ZCLabels alloc]init];
+    NSString *path=[[NSBundle mainBundle] pathForResource:@"area" ofType:@"plist"];
+    
+    arrayAllCities=[[NSMutableArray alloc] initWithContentsOfFile:path];
+    _locationview=[[POPDViewController alloc]initWithMenuSections:arrayAllCities];
+    _locationview.delegate=self;
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //----------textfield------//
     _textfieldbook=[[ZCTextField alloc]init];
@@ -60,11 +75,7 @@
     _labelbook.tag=1999;
     [self.view addSubview:_labelbook];
     arraylabeltxt=[NSMutableArray arrayWithObjects:@"姓名",@"排序", @"角色",@"性别",@"位置",@"圈子",@"常用标签",nil];
-    CGFloat yypaixu;
-    CGFloat yyrole;
-    CGFloat yysex;
-    CGFloat yylocation;
-    CGFloat yyquanzi;
+
     for (int i=0; i<7; i++) {
         _labelbook=[[ZCLabels alloc]init];
         _labelbook.frame=CGRectMake(_labelbook.frame.origin.x, _labelbook.frame.origin.y+KBREAK_LABELS*i, _labelbook.frame.size.width, _labelbook.frame.size.height);
@@ -83,6 +94,10 @@
         }
         if ([_labelbook.text isEqualToString:@"圈子"]) {
             yyquanzi=_labelbook.frame.origin.y;
+        }
+        if ([_labelbook.text isEqualToString:@"常用标签"]) {
+            _labelbook.font=[UIFont fontWithName:@"Georgia-Bold" size:8];
+           
         }
         
         _labelbook.tag=KTAG_LABELS+i;
@@ -125,10 +140,31 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)formain{
+
+    
+}
 -(void)taptheadd:(UIGestureRecognizer *)gesture{
-    NSLog(@"hello");
- 
-    ZCLocationView *locationview=[[ZCLocationView alloc]initWithFrame:CGRectMake(KRECT_LOCATIONVIEW)];
-    [self.view addSubview:locationview];
+    _locationview=[[POPDViewController alloc]initWithMenuSections:arrayAllCities];
+        _locationview.delegate=self;
+    _locationview.view.frame=CGRectMake(KRECT_LOCATIONVIEW);
+    [self addChildViewController:_locationview];
+    [self.view addSubview:_locationview.view];
+}
+//-(void)tapbackground:(UIGestureRecognizer *)gesture{
+//    [_locationview.view removeFromSuperview];
+//}
+-(void) didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"didSelectRowAtIndexPath: %d,%d",indexPath.section,indexPath.row);
+    NSString *celllabeltxt;
+    celllabeltxt=[[_locationview.sectionsArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    NSLog(@"celllabeltxt=%@",celllabeltxt);
+    [_loclabel removeFromSuperview];
+    _loclabel=[[ZCLabels alloc]init];
+    _loclabel.text=celllabeltxt;
+    _loclabel.frame=CGRectMake(140,yylocation , _loclabel.frame.size.width+20, _loclabel.frame.size.height);
+    _loclabel.backgroundColor=[UIColor colorWithRed:52.0/255.0 green:64.0/255.0 blue:73.0/255.0 alpha:0.4];
+    [self.view addSubview:_loclabel];
+    [_locationview.view removeFromSuperview];
 }
 @end
