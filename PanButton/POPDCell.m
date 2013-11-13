@@ -27,7 +27,7 @@
         [self addSubview:_label];
 
         _button=[[UIButton alloc]init];
-        [_button setTitle:@"+" forState:UIControlStateNormal];
+
         _button.titleLabel.font=KFONT;
 //        _button.backgroundColor=[UIColor redColor];
         _button.alpha=0.8;

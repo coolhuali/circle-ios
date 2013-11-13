@@ -9,14 +9,16 @@
 #import "ZCResearchViewController.h"
 #import "ZCObjects.h"
 #import "POPDViewController.h"
+#import "HZAreaPickerView.h"
 #import <QuartzCore/QuartzCore.h>
 #define KBREAK_LABELS 40
 #define KRECT_TITLE  80,60,100,25
 #define KRECT_LOCATIONVIEW 200, 220, 60, 100
 #define KTAG_LABELS 1000
 #define KTAG_SEGMENT 2000
+#define KTAG_ADDBOOK 100
 //@class ZCLabels;
-@interface ZCResearchViewController ()<POPDDelegate>
+@interface ZCResearchViewController ()<POPDDelegate,HZAreaPickerDelegate>
 {
     CGFloat yypaixu;
     CGFloat yyrole;
@@ -37,7 +39,10 @@
 @property ZCSegmentControl *segrolebook;
 @property ZCSegmentControl *segsexbook;
 @property ZCLabels *loclabel;
+@property ZCLabels *arealabel;
 @property POPDViewController  *locationview;
+@property NSString *areaValue, *cityValue;
+@property HZAreaPickerView *locatePicker;
 @end
 
 @implementation ZCResearchViewController
@@ -54,15 +59,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    UITapGestureRecognizer *tapbackgtound=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapbackground:)];
-//    [self.view addGestureRecognizer:tapbackgtound];
-    _loclabel=[[ZCLabels alloc]init];
-    NSString *path=[[NSBundle mainBundle] pathForResource:@"area" ofType:@"plist"];
-    
-    arrayAllCities=[[NSMutableArray alloc] initWithContentsOfFile:path];
-    _locationview=[[POPDViewController alloc]initWithMenuSections:arrayAllCities];
-    _locationview.delegate=self;
-        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //----------textfield------//
     _textfieldbook=[[ZCTextField alloc]init];
     _textfieldbook.placeholder=@"请输入姓名";
@@ -104,15 +102,22 @@
         [self.view addSubview:_labelbook];
     }
 //----------addlabels------//
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(taptheadd:)];
+    UITapGestureRecognizer *tap1=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(taptheadd:)];
     _labeladdbook=[[ZCLabelsADD alloc]init];
-    
     _labeladdbook.frame=CGRectMake(_labeladdbook.frame.origin.x,yylocation , _labeladdbook.frame.size.width, _labeladdbook.frame.size.height);
      [_labeladdbook setUserInteractionEnabled:YES];
-    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(taptheadd:)];
+    _labeladdbook.tag=KTAG_ADDBOOK+1;
     [_labeladdbook addGestureRecognizer:tap];
-    
     [self.view addSubview:_labeladdbook];
 
+   
+    _labeladdbook=[[ZCLabelsADD alloc]init];
+    _labeladdbook.frame=CGRectMake(_labeladdbook.frame.origin.x,yyquanzi , _labeladdbook.frame.size.width, _labeladdbook.frame.size.height);
+    [_labeladdbook setUserInteractionEnabled:YES];
+     _labeladdbook.tag=KTAG_ADDBOOK+2;
+    [self.view addSubview:_labeladdbook];
+        [_labeladdbook addGestureRecognizer:tap1];
     
 //----------segmentcontrols------//
     arraysegmentpaicutxt=[NSMutableArray arrayWithObjects:@"远近",@"年龄",@"积分",nil];
@@ -133,6 +138,17 @@
     [_segsexbook setTag:KTAG_SEGMENT+2];
     _segsexbook.frame=CGRectMake(_segsexbook.frame.origin.x, yysex, _segsexbook.frame.size.width, _segsexbook.frame.size.height);
     [self.view addSubview:_segsexbook];
+    
+    
+//----------addresults------//
+    _loclabel=[[ZCLabels alloc]init];
+    _arealabel=[[ZCLabels alloc]init];
+    _arealabel.frame=CGRectMake(140,yyquanzi , _arealabel.frame.size.width+20, _arealabel.frame.size.height);
+    NSString *path=[[NSBundle mainBundle] pathForResource:@"chinaarea" ofType:@"plist"];
+    
+    arrayAllCities=[[NSMutableArray alloc] initWithContentsOfFile:path];
+    _locationview=[[POPDViewController alloc]initWithMenuSections:arrayAllCities];
+    _locationview.delegate=self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -145,15 +161,34 @@
     
 }
 -(void)taptheadd:(UIGestureRecognizer *)gesture{
-    _locationview=[[POPDViewController alloc]initWithMenuSections:arrayAllCities];
+    NSLog(@"%d",gesture.view.tag);
+    if (gesture.view.tag==KTAG_ADDBOOK+1) {
+        _locationview=[[POPDViewController alloc]initWithMenuSections:arrayAllCities];
         _locationview.delegate=self;
-    _locationview.view.frame=CGRectMake(KRECT_LOCATIONVIEW);
-    [self addChildViewController:_locationview];
-    [self.view addSubview:_locationview.view];
+        _locationview.view.frame=CGRectMake(KRECT_LOCATIONVIEW);
+        [self addChildViewController:_locationview];
+        [self.view addSubview:_locationview.view];
+    }else if (gesture.view.tag==KTAG_ADDBOOK+2) {
+    
+//        if ([textField isEqual:self.areaText]) {
+            [self cancelLocatePicker];
+            self.locatePicker = [[HZAreaPickerView alloc] initWithStyle:HZAreaPickerWithStateAndCityAndDistrict delegate:self] ;
+            [self.locatePicker showInView:self.view];
+//        } else {
+//            [self cancelLocatePicker];
+//            self.locatePicker = [[HZAreaPickerView alloc] initWithStyle:HZAreaPickerWithStateAndCity delegate:self] ;
+//            [self.locatePicker showInView:self.view];
+//        }
+
+        
+    }
+    
 }
-//-(void)tapbackground:(UIGestureRecognizer *)gesture{
-//    [_locationview.view removeFromSuperview];
-//}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [_locationview.view removeFromSuperview];
+    [self cancelLocatePicker];
+    [_textfieldbook resignFirstResponder];
+}//关掉picker
 -(void) didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"didSelectRowAtIndexPath: %d,%d",indexPath.section,indexPath.row);
     NSString *celllabeltxt;
@@ -167,4 +202,23 @@
     [self.view addSubview:_loclabel];
     [_locationview.view removeFromSuperview];
 }
+#pragma mark - HZAreaPicker delegate
+-(void)pickerDidChaneStatus:(HZAreaPickerView *)picker
+{
+
+    [self.view addSubview:_arealabel];
+    if (picker.pickerStyle == HZAreaPickerWithStateAndCityAndDistrict) {
+        _arealabel.text = [NSString stringWithFormat:@"%@ %@ %@", picker.locate.state, picker.locate.city, picker.locate.district];
+    } else{
+        _arealabel.text = [NSString stringWithFormat:@"%@ %@", picker.locate.state, picker.locate.city];
+    }
+}
+
+-(void)cancelLocatePicker
+{
+    [self.locatePicker cancelPicker];
+    self.locatePicker.delegate = nil;
+    self.locatePicker = nil;
+}
+
 @end

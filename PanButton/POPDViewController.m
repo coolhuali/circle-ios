@@ -25,6 +25,7 @@ static NSString *kheader = @"State";
 static NSString *ksubSection = @"Cities";
 static NSString *ksubtxt =@"city";
 @interface POPDViewController (){
+    BOOL buttonmark;//判断location的button是“＋”还是“－”
 }
 
 @end
@@ -45,7 +46,7 @@ static NSString *ksubtxt =@"city";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    buttonmark=NO;
     self.tableView.backgroundColor = TABLECOLOR;
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
@@ -131,7 +132,11 @@ static NSString *ksubtxt =@"city";
         
         cell.label.text = [[self.sectionsArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
         cell.label.textColor = TEXT;
-        cell.button.tag=indexPath.section;
+        if (buttonmark==NO) {
+            [cell.button setTitle:@"+" forState:UIControlStateNormal];
+
+        }else   [cell.button  setTitle:@"-" forState:UIControlStateNormal];
+        cell.button.tag=indexPath.section+1000;
         UITapGestureRecognizer *tapbutton=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickbutton:)];
         [cell.button addGestureRecognizer:tapbutton];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
@@ -151,23 +156,29 @@ static NSString *ksubtxt =@"city";
     }
 }
 -(void)clickbutton:(UIGestureRecognizer *)ges{
-    NSInteger indexPathsec=ges.view.tag;
-    NSLog(@"%d",indexPathsec);
+    NSInteger indexPathsec=ges.view.tag-1000;
+//    NSLog(@"%d",indexPathsec);
     [self tabbutton:self.tableView :indexPathsec];
 }
 -(void)tabbutton:(UITableView *)tableView :(NSInteger )indexPathsec{
+        NSLog(@"%d",indexPathsec);
+
     if([[self.showingArray objectAtIndex:indexPathsec]boolValue]){
         [self.showingArray setObject:[NSNumber numberWithBool:NO] atIndexedSubscript:indexPathsec];
-        
+        buttonmark=NO;
+        UIButton *but=(UIButton *)[self.view viewWithTag:indexPathsec+1000];
+        [but setTitle:@"+" forState:UIControlStateNormal];
     }else{
         [self.showingArray setObject:[NSNumber numberWithBool:YES] atIndexedSubscript:indexPathsec];
-        
+        UIButton *but=(UIButton *)[self.view viewWithTag:indexPathsec+1000];
+        [but setTitle:@"-" forState:UIControlStateNormal];
+        buttonmark=YES;
     }
     [tableView reloadSections:[NSIndexSet indexSetWithIndex:indexPathsec] withRowAnimation:UITableViewRowAnimationFade];
+
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-//    [self tabbutton:tableView :indexPath];
     [self.delegate didSelectRowAtIndexPath:indexPath];
 }
 
