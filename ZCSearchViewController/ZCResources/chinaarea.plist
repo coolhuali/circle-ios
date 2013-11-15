@@ -1976,7 +1976,7 @@
 	</dict>
 	<dict>
 		<key>State</key>
-		<string>香港特别行政区</string>
+		<string>香港</string>
 		<key>Cities</key>
 		<array>
 			<dict>
@@ -2055,7 +2055,7 @@
 	</dict>
 	<dict>
 		<key>State</key>
-		<string>澳门特别行政区</string>
+		<string>澳门</string>
 		<key>Cities</key>
 		<array>
 			<dict>

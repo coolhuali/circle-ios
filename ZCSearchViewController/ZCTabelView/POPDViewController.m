@@ -10,13 +10,8 @@
 #import "POPDCell.h"
 #import "ZCObjects.h"
 #import <QuartzCore/QuartzCore.h>
-#define TABLECOLOR [UIColor colorWithRed:62.0/255.0 green:76.0/255.0 blue:87.0/255.0 alpha:0.4]
-#define CELLSELECTED [UIColor colorWithRed:52.0/255.0 green:64.0/255.0 blue:73.0/255.0 alpha:0.4]
-#define SEPARATOR [UIColor clearColor]
-#define SEPSHADOW [UIColor clearColor]
-#define SHADOW [UIColor clearColor]
-#define TEXT [UIColor whiteColor]
-
+#import "ZCDefine.h"
+#import "AMBlurView.h"
 //#define SHADOW [UIColor colorWithRed:69.0/255.0 green:84.0/255.0 blue:95.0/255.0 alpha:0.8]
 //#define SEPARATOR [UIColor colorWithRed:31.0/255.0 green:38.0/255.0 blue:43.0/255.0 alpha:0.8]
 //#define SEPSHADOW [UIColor colorWithRed:80.0/255.0 green:97.0/255.0 blue:110.0/255.0 alpha:0.8]
@@ -47,10 +42,12 @@ static NSString *ksubtxt =@"city";
 {
     [super viewDidLoad];
     buttonmark=NO;
-    self.tableView.backgroundColor = TABLECOLOR;
+    self.tableView.backgroundColor = KCOLOR_TABLE;
+
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
     self.tableView.frame = self.view.frame;
+    
     self.sectionsArray = [NSMutableArray new];
     self.showingArray = [NSMutableArray new];
     self.SecOrSubArray= [NSMutableArray new];
@@ -114,7 +111,7 @@ static NSString *ksubtxt =@"city";
 
     if(indexPath.row ==0){
     if([[self.showingArray objectAtIndex:indexPath.section]boolValue]){
-        [cell setBackgroundColor:[UIColor colorWithRed:62.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:0.4 ]];
+        [cell setBackgroundColor:[UIColor colorWithRed:62.0/255.0 green:100.0/255.0 blue:100.0/255.0 alpha:0.9 ]];
     }else{
         [cell setBackgroundColor:[UIColor clearColor]];
     }
@@ -131,10 +128,9 @@ static NSString *ksubtxt =@"city";
         }
         
         cell.label.text = [[self.sectionsArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-        cell.label.textColor = TEXT;
+        cell.label.textColor = KCOLOR_FONT;
         if (buttonmark==NO) {
             [cell.button setTitle:@"+" forState:UIControlStateNormal];
-
         }else   [cell.button  setTitle:@"-" forState:UIControlStateNormal];
         cell.button.tag=indexPath.section+1000;
         UITapGestureRecognizer *tapbutton=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickbutton:)];
@@ -148,7 +144,7 @@ static NSString *ksubtxt =@"city";
             }
             
             cell.labelsub.text = [[self.sectionsArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-            cell.labelsub.textColor = TEXT;
+            cell.labelsub.textColor = KCOLOR_FONT;
             
             
             [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
@@ -161,7 +157,7 @@ static NSString *ksubtxt =@"city";
     [self tabbutton:self.tableView :indexPathsec];
 }
 -(void)tabbutton:(UITableView *)tableView :(NSInteger )indexPathsec{
-        NSLog(@"%d",indexPathsec);
+//        NSLog(@"%d",indexPathsec);
 
     if([[self.showingArray objectAtIndex:indexPathsec]boolValue]){
         [self.showingArray setObject:[NSNumber numberWithBool:NO] atIndexedSubscript:indexPathsec];
@@ -186,9 +182,9 @@ static NSString *ksubtxt =@"city";
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([[[self.SecOrSubArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] boolValue]) {
-        return 17;
+        return 28;
     }else {
-        return 14;
+        return 25;
     }//cell高度
 }
 /*

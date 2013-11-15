@@ -9,10 +9,18 @@
 #import <Foundation/Foundation.h>
 
 #import "CCSegmentedControl.h"
+
+
 @interface ZCLabels : UILabel
 
 @end
 @interface ZCLabelsADD : UILabel
+
+@end
+@interface ZCLabelsCYLC : UILabel
+
+@end
+@interface ZCLabelsCYQZ : UILabel
 
 @end
 @interface ZCTextField : UITextField

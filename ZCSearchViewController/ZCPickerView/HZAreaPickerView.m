@@ -8,14 +8,14 @@
 
 #import "HZAreaPickerView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ZCObjects.h"
+#import "ZCDefine.h"
 
-#define kDuration 0.3
-#define  KFONT    [UIFont fontWithName:@"Georgia-Bold" size:12]
-@interface HZAreaPickerView ()
+@class ZCResearchViewController;
+@interface HZAreaPickerView () <UIPickerViewDelegate>
 {
     NSArray *provinces, *cities, *areas;
 }
-
 @end
 
 @implementation HZAreaPickerView
@@ -41,11 +41,16 @@
     
     self = [[[NSBundle mainBundle] loadNibNamed:@"HZAreaPickerView" owner:self options:nil] objectAtIndex:0];
     if (self) {
-        self.delegate = delegate;
+
+        self.backgroundColor=KCOLOR_TABLE;
+
+        self.locatePicker.frame=CGRectMake(self.locatePicker.frame.origin.x, self.locatePicker.frame.origin.y, self.locatePicker.frame.size.width, KRECT_PICKER.size.height);
+        
         self.pickerStyle = pickerStyle;
+        self.delegate = delegate;
+        
         self.locatePicker.dataSource = self;
         self.locatePicker.delegate = self;
-//            self.locatePicker.frame = CGRectMake(176, 187, 132, 80);
         //加载数据
         if (self.pickerStyle == HZAreaPickerWithStateAndCityAndDistrict) {
             provinces = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area.plist" ofType:nil]];
@@ -67,8 +72,9 @@
             self.locate.state = [[provinces objectAtIndex:0] objectForKey:@"state"];
             self.locate.city = [cities objectAtIndex:0];
         }
+
     }
-        
+    
     return self;
     
 }
@@ -212,13 +218,12 @@
 
 - (void)showInView:(UIView *) view
 {
-    self.frame = CGRectMake(80, view.frame.size.height, self.frame.size.width, self.frame.size.height);
-    NSLog(@"%f,%f,%f,%f",self.frame.origin.x, view.frame.size.height, self.frame.size.width, self.frame.size.height);
+    self.frame = CGRectMake(KRECT_PICKER.origin.x, view.frame.size.height, self.frame.size.width, KRECT_PICKER.size.height);
     [view addSubview:self];
     
     [UIView animateWithDuration:0.3 animations:^{
-        self.frame = CGRectMake(80, view.frame.size.height - self.frame.size.height, self.frame.size.width, self.frame.size.height);
-            NSLog(@"%f,%f,%f,%f",self.frame.origin.x, view.frame.size.height - self.frame.size.height, self.frame.size.width, self.frame.size.height);
+        self.frame = CGRectMake(KRECT_PICKER.origin.x, 380, self.frame.size.width, KRECT_PICKER.size.height);
+        
     }];
     
 }
@@ -228,7 +233,7 @@
     
     [UIView animateWithDuration:0.3
                      animations:^{
-                         self.frame = CGRectMake(0, self.frame.origin.y+self.frame.size.height, self.frame.size.width, self.frame.size.height);
+                         self.frame = CGRectMake(KRECT_PICKER.origin.x, 640, self.frame.size.width, KRECT_PICKER.size.height);
                      }
                      completion:^(BOOL finished){
                          [self removeFromSuperview];
@@ -272,18 +277,18 @@ forComponent:(NSInteger)component reusingView:(UIView *)view
                 break;
         }
     }
-
     
     UILabel *mycom1;
-    mycom1 = view ? (UILabel *) view : [[UILabel alloc] initWithFrame:CGRectMake(10, 0.0f, 60.0f, 30.0f)];
+    mycom1 = view ? (UILabel *) view : [[UILabel alloc] init];//WithFrame:CGRectMake(10, 0.0f, 60.0f, 30.0f)];
     mycom1.textAlignment=NSTextAlignmentCenter;
-
     mycom1.text = imgstr1;
     [mycom1 setFont:KFONT];
+    mycom1.textColor=KCOLOR_FONT;
     mycom1.backgroundColor = [UIColor clearColor];
-//    CFShow(mycom1);
-//    [view addSubview:mycom1];
-    
     return mycom1;
 }
+//-(float)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
+//
+//    return 30;
+//}
 @end

@@ -12,7 +12,7 @@
 
 #define DEFAULT_SHADOW_WIDTH    -3.0       //影宽
 #define DEFAULT_SHADOW_HEIGHT   0.5        //影高
-#define DEFAULT_SHADOW_OPACITY  0.9        //影透度
+#define DEFAULT_SHADOW_OPACITY  0        //影透度
 #define MYBUTTON_TITLE          @"标题"     //按钮标题
 #define MYBUTTON_ORINGI_X       SCREEM_WIDTH-MYBUTTONANDFVIEWDIC      //按钮初始位置x
 #define MYBUTTON_ORINGI_Y       77       //按钮初始位置y
@@ -450,7 +450,7 @@ static CGRect size;
 {
     UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:mView.bounds];
     mView.layer.masksToBounds = NO;
-    mView.layer.shadowColor = [UIColor blackColor].CGColor;
+//    mView.layer.shadowColor = [UIColor grayColor].CGColor;
     if(self.shadowOffset.width == 0 && self.shadowOffset.height == 0)
         mView.layer.shadowOffset = CGSizeMake(DEFAULT_SHADOW_WIDTH, DEFAULT_SHADOW_HEIGHT);
     else mView.layer.shadowOffset = self.shadowOffset;
@@ -465,7 +465,7 @@ static CGRect size;
 #pragma mark Replacement Methods
 - (void)replaceFirstLayerViewControllerWithViewController:(UIViewController *)newViewController{
     [self setFirstLayerViewController:newViewController];
-    self.shadowOpacity = 0.2;
+//    self.shadowOpacity = 0.2;
     
 }
 

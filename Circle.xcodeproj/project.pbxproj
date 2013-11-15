@@ -383,23 +383,25 @@
 		1AF085751818EC6C00B82F81 /* DEMONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF085731818EC6C00B82F81 /* DEMONavigationController.m */; };
 		1AF085771818EE9C00B82F81 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF085761818EE9C00B82F81 /* Accelerate.framework */; };
 		1AF085791818F32B00B82F81 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AF085781818F32B00B82F81 /* avatar@2x.jpg */; };
-		B40A254518307DD40030C562 /* chinaarea.plist in Resources */ = {isa = PBXBuildFile; fileRef = B40A254418307DD40030C562 /* chinaarea.plist */; };
-		B40A2553183095490030C562 /* POPDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40A2552183095490030C562 /* POPDViewController.m */; };
-		B40A25581830A34D0030C562 /* POPDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B40A25561830A34D0030C562 /* POPDCell.m */; };
-		B40A255C183220310030C562 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = B40A255B183220310030C562 /* up.png */; };
-		B40A25A618322CA00030C562 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = B40A259F18322CA00030C562 /* area.plist */; };
-		B40A25A718322CA00030C562 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = B40A25A018322CA00030C562 /* city.plist */; };
-		B40A25A818322CA00030C562 /* HZAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B40A25A218322CA00030C562 /* HZAreaPickerView.m */; };
-		B40A25AA18322CA00030C562 /* HZLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B40A25A518322CA00030C562 /* HZLocation.m */; };
-		B40A25AC1833246D0030C562 /* HZAreaPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B40A25AB1833246D0030C562 /* HZAreaPickerView.xib */; };
-		B4194703182CFB0F004712AC /* ZCObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = B4194700182CFB0F004712AC /* ZCObjects.m */; };
-		B4194704182CFB0F004712AC /* ZCResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4194702182CFB0F004712AC /* ZCResearchViewController.m */; };
-		B487E80118287B3400B95A93 /* ACPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B487E7FE18287B3400B95A93 /* ACPButton.m */; };
-		B487E80218287B3400B95A93 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B487E80018287B3400B95A93 /* ContainerViewController.m */; };
-		B4A16DC9182DD0190016A57E /* CCSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A16DC8182DD0190016A57E /* CCSegmentedControl.m */; };
-		B4A16DCB182DD51A0016A57E /* segment_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A16DCA182DD51A0016A57E /* segment_bg.png */; };
-		B4A16DCD182DD52B0016A57E /* stain.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A16DCC182DD52B0016A57E /* stain.png */; };
-		B4A16DDA182DE89B0016A57E /* ADD.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A16DD9182DE89B0016A57E /* ADD.png */; };
+		B43216B11834C5060019C3DE /* ZCResearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B432168F1834C5060019C3DE /* ZCResearchViewController.m */; };
+		B43216B21834C5060019C3DE /* ZCDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216921834C5060019C3DE /* ZCDefine.m */; };
+		B43216B31834C5060019C3DE /* ZCObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216951834C5060019C3DE /* ZCObjects.m */; };
+		B43216B41834C5060019C3DE /* ACPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216981834C5060019C3DE /* ACPButton.m */; };
+		B43216B51834C5060019C3DE /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B432169A1834C5060019C3DE /* ContainerViewController.m */; };
+		B43216B61834C5060019C3DE /* HZAreaPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B432169D1834C5060019C3DE /* HZAreaPickerView.m */; };
+		B43216B71834C5060019C3DE /* HZAreaPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B432169E1834C5060019C3DE /* HZAreaPickerView.xib */; };
+		B43216B81834C5060019C3DE /* HZLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216A01834C5060019C3DE /* HZLocation.m */; };
+		B43216B91834C5060019C3DE /* ADD.png in Resources */ = {isa = PBXBuildFile; fileRef = B43216A21834C5060019C3DE /* ADD.png */; };
+		B43216BA1834C5060019C3DE /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43216A31834C5060019C3DE /* area.plist */; };
+		B43216BB1834C5060019C3DE /* chinaarea.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43216A41834C5060019C3DE /* chinaarea.plist */; };
+		B43216BC1834C5060019C3DE /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43216A51834C5060019C3DE /* city.plist */; };
+		B43216BD1834C5060019C3DE /* segment_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B43216A61834C5060019C3DE /* segment_bg.png */; };
+		B43216BE1834C5060019C3DE /* stain.png in Resources */ = {isa = PBXBuildFile; fileRef = B43216A71834C5060019C3DE /* stain.png */; };
+		B43216BF1834C5060019C3DE /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = B43216A81834C5060019C3DE /* up.png */; };
+		B43216C01834C5060019C3DE /* CCSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216AB1834C5060019C3DE /* CCSegmentedControl.m */; };
+		B43216C11834C5060019C3DE /* POPDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216AE1834C5060019C3DE /* POPDCell.m */; };
+		B43216C21834C5060019C3DE /* POPDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216B01834C5060019C3DE /* POPDViewController.m */; };
+		B43216CF1834D2250019C3DE /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216CD1834D2250019C3DE /* AMBlurView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1045,32 +1047,36 @@
 		1AF085731818EC6C00B82F81 /* DEMONavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONavigationController.m; sourceTree = "<group>"; };
 		1AF085761818EE9C00B82F81 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		1AF085781818F32B00B82F81 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
-		B40A254418307DD40030C562 /* chinaarea.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = chinaarea.plist; sourceTree = "<group>"; };
-		B40A2551183095490030C562 /* POPDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDViewController.h; sourceTree = "<group>"; };
-		B40A2552183095490030C562 /* POPDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDViewController.m; sourceTree = "<group>"; };
-		B40A25551830A34D0030C562 /* POPDCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDCell.h; sourceTree = "<group>"; };
-		B40A25561830A34D0030C562 /* POPDCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDCell.m; sourceTree = "<group>"; };
-		B40A255B183220310030C562 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
-		B40A259F18322CA00030C562 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
-		B40A25A018322CA00030C562 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
-		B40A25A118322CA00030C562 /* HZAreaPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZAreaPickerView.h; sourceTree = "<group>"; };
-		B40A25A218322CA00030C562 /* HZAreaPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZAreaPickerView.m; sourceTree = "<group>"; };
-		B40A25A418322CA00030C562 /* HZLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZLocation.h; sourceTree = "<group>"; };
-		B40A25A518322CA00030C562 /* HZLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZLocation.m; sourceTree = "<group>"; };
-		B40A25AB1833246D0030C562 /* HZAreaPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZAreaPickerView.xib; sourceTree = "<group>"; };
-		B41946FF182CFB0F004712AC /* ZCObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCObjects.h; sourceTree = "<group>"; };
-		B4194700182CFB0F004712AC /* ZCObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCObjects.m; sourceTree = "<group>"; };
-		B4194701182CFB0F004712AC /* ZCResearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCResearchViewController.h; sourceTree = "<group>"; };
-		B4194702182CFB0F004712AC /* ZCResearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCResearchViewController.m; sourceTree = "<group>"; };
-		B487E7FD18287B3400B95A93 /* ACPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPButton.h; sourceTree = "<group>"; };
-		B487E7FE18287B3400B95A93 /* ACPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPButton.m; sourceTree = "<group>"; };
-		B487E7FF18287B3400B95A93 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
-		B487E80018287B3400B95A93 /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
-		B4A16DC7182DD0190016A57E /* CCSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSegmentedControl.h; sourceTree = "<group>"; };
-		B4A16DC8182DD0190016A57E /* CCSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSegmentedControl.m; sourceTree = "<group>"; };
-		B4A16DCA182DD51A0016A57E /* segment_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segment_bg.png; sourceTree = "<group>"; };
-		B4A16DCC182DD52B0016A57E /* stain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stain.png; sourceTree = "<group>"; };
-		B4A16DD9182DE89B0016A57E /* ADD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADD.png; sourceTree = "<group>"; };
+		B432168E1834C5060019C3DE /* ZCResearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCResearchViewController.h; sourceTree = "<group>"; };
+		B432168F1834C5060019C3DE /* ZCResearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCResearchViewController.m; sourceTree = "<group>"; };
+		B43216911834C5060019C3DE /* ZCDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCDefine.h; sourceTree = "<group>"; };
+		B43216921834C5060019C3DE /* ZCDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCDefine.m; sourceTree = "<group>"; };
+		B43216941834C5060019C3DE /* ZCObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCObjects.h; sourceTree = "<group>"; };
+		B43216951834C5060019C3DE /* ZCObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCObjects.m; sourceTree = "<group>"; };
+		B43216971834C5060019C3DE /* ACPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPButton.h; sourceTree = "<group>"; };
+		B43216981834C5060019C3DE /* ACPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPButton.m; sourceTree = "<group>"; };
+		B43216991834C5060019C3DE /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		B432169A1834C5060019C3DE /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
+		B432169C1834C5060019C3DE /* HZAreaPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZAreaPickerView.h; sourceTree = "<group>"; };
+		B432169D1834C5060019C3DE /* HZAreaPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZAreaPickerView.m; sourceTree = "<group>"; };
+		B432169E1834C5060019C3DE /* HZAreaPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZAreaPickerView.xib; sourceTree = "<group>"; };
+		B432169F1834C5060019C3DE /* HZLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZLocation.h; sourceTree = "<group>"; };
+		B43216A01834C5060019C3DE /* HZLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZLocation.m; sourceTree = "<group>"; };
+		B43216A21834C5060019C3DE /* ADD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADD.png; sourceTree = "<group>"; };
+		B43216A31834C5060019C3DE /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		B43216A41834C5060019C3DE /* chinaarea.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = chinaarea.plist; sourceTree = "<group>"; };
+		B43216A51834C5060019C3DE /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		B43216A61834C5060019C3DE /* segment_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segment_bg.png; sourceTree = "<group>"; };
+		B43216A71834C5060019C3DE /* stain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stain.png; sourceTree = "<group>"; };
+		B43216A81834C5060019C3DE /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		B43216AA1834C5060019C3DE /* CCSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSegmentedControl.h; sourceTree = "<group>"; };
+		B43216AB1834C5060019C3DE /* CCSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSegmentedControl.m; sourceTree = "<group>"; };
+		B43216AD1834C5060019C3DE /* POPDCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDCell.h; sourceTree = "<group>"; };
+		B43216AE1834C5060019C3DE /* POPDCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDCell.m; sourceTree = "<group>"; };
+		B43216AF1834C5060019C3DE /* POPDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDViewController.h; sourceTree = "<group>"; };
+		B43216B01834C5060019C3DE /* POPDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDViewController.m; sourceTree = "<group>"; };
+		B43216CC1834D2250019C3DE /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBlurView.h; sourceTree = "<group>"; };
+		B43216CD1834D2250019C3DE /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBlurView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1114,7 +1120,7 @@
 				1A6BE30317F6FC77006C1BF8 /* Frameworks */,
 				1A6BE30217F6FC77006C1BF8 /* Products */,
 				1AC56F6D181FB0D000C5BA69 /* README */,
-				B487E7FC18287B3400B95A93 /* PanButton */,
+				B432168C1834C5060019C3DE /* ZCSearchViewController */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2417,45 +2423,113 @@
 			path = REFrostedViewController;
 			sourceTree = "<group>";
 		};
-		B40A259E18322CA00030C562 /* picker */ = {
+		B432168C1834C5060019C3DE /* ZCSearchViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B40A25AB1833246D0030C562 /* HZAreaPickerView.xib */,
-				B40A259F18322CA00030C562 /* area.plist */,
-				B40A25A018322CA00030C562 /* city.plist */,
-				B40A25A118322CA00030C562 /* HZAreaPickerView.h */,
-				B40A25A218322CA00030C562 /* HZAreaPickerView.m */,
-				B40A25A418322CA00030C562 /* HZLocation.h */,
-				B40A25A518322CA00030C562 /* HZLocation.m */,
+				B43216C91834D2070019C3DE /* ZCBlur */,
+				B432168D1834C5060019C3DE /* ZCController */,
+				B43216901834C5060019C3DE /* ZCDefine */,
+				B43216931834C5060019C3DE /* ZCObjects */,
+				B43216961834C5060019C3DE /* ZCPanButton */,
+				B432169B1834C5060019C3DE /* ZCPickerView */,
+				B43216A11834C5060019C3DE /* ZCResources */,
+				B43216A91834C5060019C3DE /* ZCSegment */,
+				B43216AC1834C5060019C3DE /* ZCTabelView */,
 			);
-			path = picker;
+			path = ZCSearchViewController;
 			sourceTree = "<group>";
 		};
-		B487E7FC18287B3400B95A93 /* PanButton */ = {
+		B432168D1834C5060019C3DE /* ZCController */ = {
 			isa = PBXGroup;
 			children = (
-				B40A259E18322CA00030C562 /* picker */,
-				B40A254418307DD40030C562 /* chinaarea.plist */,
-				B40A255B183220310030C562 /* up.png */,
-				B4A16DD9182DE89B0016A57E /* ADD.png */,
-				B4A16DCC182DD52B0016A57E /* stain.png */,
-				B4A16DCA182DD51A0016A57E /* segment_bg.png */,
-				B41946FF182CFB0F004712AC /* ZCObjects.h */,
-				B4194700182CFB0F004712AC /* ZCObjects.m */,
-				B4A16DC7182DD0190016A57E /* CCSegmentedControl.h */,
-				B4A16DC8182DD0190016A57E /* CCSegmentedControl.m */,
-				B40A25551830A34D0030C562 /* POPDCell.h */,
-				B40A25561830A34D0030C562 /* POPDCell.m */,
-				B40A2551183095490030C562 /* POPDViewController.h */,
-				B40A2552183095490030C562 /* POPDViewController.m */,
-				B4194701182CFB0F004712AC /* ZCResearchViewController.h */,
-				B4194702182CFB0F004712AC /* ZCResearchViewController.m */,
-				B487E7FD18287B3400B95A93 /* ACPButton.h */,
-				B487E7FE18287B3400B95A93 /* ACPButton.m */,
-				B487E7FF18287B3400B95A93 /* ContainerViewController.h */,
-				B487E80018287B3400B95A93 /* ContainerViewController.m */,
+				B432168E1834C5060019C3DE /* ZCResearchViewController.h */,
+				B432168F1834C5060019C3DE /* ZCResearchViewController.m */,
 			);
-			path = PanButton;
+			path = ZCController;
+			sourceTree = "<group>";
+		};
+		B43216901834C5060019C3DE /* ZCDefine */ = {
+			isa = PBXGroup;
+			children = (
+				B43216911834C5060019C3DE /* ZCDefine.h */,
+				B43216921834C5060019C3DE /* ZCDefine.m */,
+			);
+			path = ZCDefine;
+			sourceTree = "<group>";
+		};
+		B43216931834C5060019C3DE /* ZCObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B43216941834C5060019C3DE /* ZCObjects.h */,
+				B43216951834C5060019C3DE /* ZCObjects.m */,
+			);
+			path = ZCObjects;
+			sourceTree = "<group>";
+		};
+		B43216961834C5060019C3DE /* ZCPanButton */ = {
+			isa = PBXGroup;
+			children = (
+				B43216971834C5060019C3DE /* ACPButton.h */,
+				B43216981834C5060019C3DE /* ACPButton.m */,
+				B43216991834C5060019C3DE /* ContainerViewController.h */,
+				B432169A1834C5060019C3DE /* ContainerViewController.m */,
+			);
+			path = ZCPanButton;
+			sourceTree = "<group>";
+		};
+		B432169B1834C5060019C3DE /* ZCPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B432169C1834C5060019C3DE /* HZAreaPickerView.h */,
+				B432169D1834C5060019C3DE /* HZAreaPickerView.m */,
+				B432169E1834C5060019C3DE /* HZAreaPickerView.xib */,
+				B432169F1834C5060019C3DE /* HZLocation.h */,
+				B43216A01834C5060019C3DE /* HZLocation.m */,
+			);
+			path = ZCPickerView;
+			sourceTree = "<group>";
+		};
+		B43216A11834C5060019C3DE /* ZCResources */ = {
+			isa = PBXGroup;
+			children = (
+				B43216A21834C5060019C3DE /* ADD.png */,
+				B43216A31834C5060019C3DE /* area.plist */,
+				B43216A41834C5060019C3DE /* chinaarea.plist */,
+				B43216A51834C5060019C3DE /* city.plist */,
+				B43216A61834C5060019C3DE /* segment_bg.png */,
+				B43216A71834C5060019C3DE /* stain.png */,
+				B43216A81834C5060019C3DE /* up.png */,
+			);
+			path = ZCResources;
+			sourceTree = "<group>";
+		};
+		B43216A91834C5060019C3DE /* ZCSegment */ = {
+			isa = PBXGroup;
+			children = (
+				B43216AA1834C5060019C3DE /* CCSegmentedControl.h */,
+				B43216AB1834C5060019C3DE /* CCSegmentedControl.m */,
+			);
+			path = ZCSegment;
+			sourceTree = "<group>";
+		};
+		B43216AC1834C5060019C3DE /* ZCTabelView */ = {
+			isa = PBXGroup;
+			children = (
+				B43216AD1834C5060019C3DE /* POPDCell.h */,
+				B43216AE1834C5060019C3DE /* POPDCell.m */,
+				B43216AF1834C5060019C3DE /* POPDViewController.h */,
+				B43216B01834C5060019C3DE /* POPDViewController.m */,
+			);
+			path = ZCTabelView;
+			sourceTree = "<group>";
+		};
+		B43216C91834D2070019C3DE /* ZCBlur */ = {
+			isa = PBXGroup;
+			children = (
+				B43216CC1834D2250019C3DE /* AMBlurView.h */,
+				B43216CD1834D2250019C3DE /* AMBlurView.m */,
+			);
+			name = ZCBlur;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2518,26 +2592,26 @@
 				1A5AB45D17FEE0DD0095C7B2 /* TypeSelectorBtn_Black@2x.png in Resources */,
 				1A66645A1807D05F00A846B9 /* Icon@2x.png in Resources */,
 				1A6BE30F17F6FC77006C1BF8 /* InfoPlist.strings in Resources */,
+				B43216B91834C5060019C3DE /* ADD.png in Resources */,
+				B43216BD1834C5060019C3DE /* segment_bg.png in Resources */,
 				1A4DFFFE17FBEC2D007D74D4 /* VOIPReceiverVoiceNodeBkg@2x.png in Resources */,
 				1A5AB46117FEE0DD0095C7B2 /* ToolViewInputVoiceHL@2x.png in Resources */,
 				1A5AB45C17FEE0DD0095C7B2 /* operationbox_text@2x.png in Resources */,
 				1A6BE31717F6FC77006C1BF8 /* Default.png in Resources */,
-				B40A25AC1833246D0030C562 /* HZAreaPickerView.xib in Resources */,
 				1A6BE31917F6FC77006C1BF8 /* Default@2x.png in Resources */,
 				1A6BE31B17F6FC77006C1BF8 /* Default-568h@2x.png in Resources */,
 				1A6BE47117F6FE5F006C1BF8 /* README.txt in Resources */,
 				1A5AB46517FEE0DD0095C7B2 /* ToolViewEmotionHL@2x.png in Resources */,
-				B4A16DCD182DD52B0016A57E /* stain.png in Resources */,
 				1A6BE47617F6FE5F006C1BF8 /* build-libidn.sh in Resources */,
 				1A6BE4DE17F70026006C1BF8 /* microphone.png in Resources */,
 				1ADCBB0B17FAD47700BAA9B3 /* Speak@2x.png in Resources */,
 				1A6BE4E917F70916006C1BF8 /* Localizable.strings in Resources */,
 				1ADA32FB1815133B003D44DB /* topDone.png in Resources */,
 				1A6BE53217F70BBA006C1BF8 /* SVProgressHUD.bundle in Resources */,
+				B43216BE1834C5060019C3DE /* stain.png in Resources */,
 				1A6BE57217F70CD9006C1BF8 /* BRCameraPickerViewController.xib in Resources */,
 				1A5AB46217FEE0DD0095C7B2 /* ToolViewInputVoice@2x.png in Resources */,
 				1A6BE57317F70CD9006C1BF8 /* camera-device.png in Resources */,
-				B4A16DDA182DE89B0016A57E /* ADD.png in Resources */,
 				1A6BE57417F70CD9006C1BF8 /* camera-device@2x.png in Resources */,
 				1ADCBB0D17FAD47700BAA9B3 /* Text@2x.png in Resources */,
 				1ADCBB0817FAD47700BAA9B3 /* InputBack.png in Resources */,
@@ -2561,12 +2635,14 @@
 				1A4DFFFF17FBEC2D007D74D4 /* SenderTextNodeBkgHL@2x.png in Resources */,
 				1A6BE59217F710FF006C1BF8 /* DemoTableHeaderView.xib in Resources */,
 				1A6BE62D17F7115C006C1BF8 /* defaultPic.png in Resources */,
+				B43216BA1834C5060019C3DE /* area.plist in Resources */,
 				1A6BE62E17F7115C006C1BF8 /* input-bar.png in Resources */,
 				1ADCBB0E17FAD47700BAA9B3 /* Voice.png in Resources */,
 				1A6BE62F17F7115C006C1BF8 /* input-bar@2x.png in Resources */,
 				1A4D000217FBEC2D007D74D4 /* ReceiverTextNodeBkg@2x.png in Resources */,
 				1A6BE63017F7115C006C1BF8 /* input-field.png in Resources */,
 				1A6BE63117F7115C006C1BF8 /* input-field@2x.png in Resources */,
+				B43216BC1834C5060019C3DE /* city.plist in Resources */,
 				1ADCBB0A17FAD47700BAA9B3 /* Speak.png in Resources */,
 				1ADCBB0917FAD47700BAA9B3 /* InputBack@2x.png in Resources */,
 				1AE1331D18050C7700042C86 /* MessageListCellBkg@2x.png in Resources */,
@@ -2579,12 +2655,13 @@
 				1A6BE63417F7115C006C1BF8 /* messageBubbleGray.png in Resources */,
 				1A5AB45517FEE0DD0095C7B2 /* sharemore_wxtalk@2x.png in Resources */,
 				1A6BE63517F7115C006C1BF8 /* messageBubbleGray@2x.png in Resources */,
-				B40A254518307DD40030C562 /* chinaarea.plist in Resources */,
 				1ADCBB0217FAD47700BAA9B3 /* face.png in Resources */,
 				1ADA32F81815133B003D44DB /* backImage.png in Resources */,
 				1A6BE63617F7115C006C1BF8 /* messageBubbleHighlighted.png in Resources */,
 				1ADCBB0617FAD47700BAA9B3 /* facesBack.png in Resources */,
+				B43216BF1834C5060019C3DE /* up.png in Resources */,
 				1A5AB45717FEE0DD0095C7B2 /* sharemore_voiceinput@2x.png in Resources */,
+				B43216B71834C5060019C3DE /* HZAreaPickerView.xib in Resources */,
 				1A6BE63717F7115C006C1BF8 /* messageBubbleHighlighted@2x.png in Resources */,
 				1A5AB46417FEE0DD0095C7B2 /* ToolViewInputText@2x.png in Resources */,
 				1A6BE63817F7115C006C1BF8 /* messageBubbleTyping.png in Resources */,
@@ -2593,8 +2670,6 @@
 				1A6BE63917F7115C006C1BF8 /* messageBubbleTyping@2x.png in Resources */,
 				1A6BE63A17F7115C006C1BF8 /* send-highlighted.png in Resources */,
 				1A6BE63B17F7115C006C1BF8 /* send-highlighted@2x.png in Resources */,
-				B40A255C183220310030C562 /* up.png in Resources */,
-				B4A16DCB182DD51A0016A57E /* segment_bg.png in Resources */,
 				1A4DFFFB17FBEC2D007D74D4 /* VOIPSenderVoiceNodeBkgHL@2x.png in Resources */,
 				1A6BE63C17F7115C006C1BF8 /* send.png in Resources */,
 				1A6BE63D17F7115C006C1BF8 /* send@2x.png in Resources */,
@@ -2615,9 +2690,9 @@
 				1ADCBB0C17FAD47700BAA9B3 /* Text.png in Resources */,
 				1A6BE66C17F7115C006C1BF8 /* deletbutton.png in Resources */,
 				1AF085791818F32B00B82F81 /* avatar@2x.jpg in Resources */,
+				B43216BB1834C5060019C3DE /* chinaarea.plist in Resources */,
 				1A6BE66D17F7115C006C1BF8 /* icon.png in Resources */,
 				1A6BE66E17F7115C006C1BF8 /* icon1.png in Resources */,
-				B40A25A618322CA00030C562 /* area.plist in Resources */,
 				1A5AB45B17FEE0DD0095C7B2 /* sharemoreAdd@2x.png in Resources */,
 				1A6BE66F17F7115C006C1BF8 /* icon2.png in Resources */,
 				1A6BE67017F7115C006C1BF8 /* red-x.png in Resources */,
@@ -2625,7 +2700,6 @@
 				1A6BE67A17F7134B006C1BF8 /* GroupSettingViewController.xib in Resources */,
 				1A4DFFFD17FBEC2D007D74D4 /* VOIPReceiverVoiceNodeBkgHL@2x.png in Resources */,
 				1ADA32FE1815136F003D44DB /* defaultPic.png in Resources */,
-				B40A25A718322CA00030C562 /* city.plist in Resources */,
 				1A5AB45917FEE0DD0095C7B2 /* sharemore_pic@2x.png in Resources */,
 				1A5AB45817FEE0DD0095C7B2 /* sharemore_video@2x.png in Resources */,
 				1A5AB45E17FEE0DD0095C7B2 /* TypeSelectorBtnHL_Black@2x.png in Resources */,
@@ -2684,6 +2758,7 @@
 				1A6BE46017F6FE5F006C1BF8 /* XMPPRosterMemoryStorage.m in Sources */,
 				1A6BE46117F6FE5F006C1BF8 /* XMPPUserMemoryStorageObject.m in Sources */,
 				1A6BE46217F6FE5F006C1BF8 /* XMPPRoster.m in Sources */,
+				B43216B61834C5060019C3DE /* HZAreaPickerView.m in Sources */,
 				1A6BE46317F6FE5F006C1BF8 /* DDList.m in Sources */,
 				1A6BE46417F6FE5F006C1BF8 /* GCDMulticastDelegate.m in Sources */,
 				1A6BE46517F6FE5F006C1BF8 /* LibIDN.m in Sources */,
@@ -2696,11 +2771,12 @@
 				1A6BE46B17F6FE5F006C1BF8 /* DDASLLogger.m in Sources */,
 				1A6BE46C17F6FE5F006C1BF8 /* DDFileLogger.m in Sources */,
 				1A6BE46D17F6FE5F006C1BF8 /* DDLog.m in Sources */,
+				B43216C01834C5060019C3DE /* CCSegmentedControl.m in Sources */,
 				1A6BE46E17F6FE5F006C1BF8 /* DDTTYLogger.m in Sources */,
 				1AF0856E1818EB7A00B82F81 /* UIView+REFrostedViewController.m in Sources */,
 				1A6BE46F17F6FE5F006C1BF8 /* ContextFilterLogFormatter.m in Sources */,
 				1A6BE47017F6FE5F006C1BF8 /* DispatchQueueLogFormatter.m in Sources */,
-				B4194703182CFB0F004712AC /* ZCObjects.m in Sources */,
+				B43216B31834C5060019C3DE /* ZCObjects.m in Sources */,
 				1A6BE47217F6FE5F006C1BF8 /* NSString+DDXML.m in Sources */,
 				1A6BE47317F6FE5F006C1BF8 /* DDXMLDocument.m in Sources */,
 				1A6BE47417F6FE5F006C1BF8 /* DDXMLElement.m in Sources */,
@@ -2726,10 +2802,11 @@
 				1A6BE48817F6FE5F006C1BF8 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				1A034696180400B500BA449F /* MRecentMessage.m in Sources */,
 				1A6BE48917F6FE5F006C1BF8 /* XMPPvCardCoreDataStorage.m in Sources */,
-				B40A25AA18322CA00030C562 /* HZLocation.m in Sources */,
+				B43216B51834C5060019C3DE /* ContainerViewController.m in Sources */,
 				1A6BE48A17F6FE5F006C1BF8 /* XMPPvCardCoreDataStorageObject.m in Sources */,
 				1A6BE48B17F6FE5F006C1BF8 /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
 				1A6BE48C17F6FE5F006C1BF8 /* XMPPvCardTemp.m in Sources */,
+				B43216C21834C5060019C3DE /* POPDViewController.m in Sources */,
 				1A6BE48D17F6FE5F006C1BF8 /* XMPPvCardTempAdr.m in Sources */,
 				1A6BE48E17F6FE5F006C1BF8 /* XMPPvCardTempAdrTypes.m in Sources */,
 				1A0346901803EC1C00BA449F /* MessageRecentCell.m in Sources */,
@@ -2755,7 +2832,6 @@
 				1A6BE4A017F6FE5F006C1BF8 /* XMPPMessageArchiving_Contact_CoreDataObject.m in Sources */,
 				1A6BE4A117F6FE5F006C1BF8 /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
 				1A6BE4A217F6FE5F006C1BF8 /* XMPPMessageArchivingCoreDataStorage.m in Sources */,
-				B487E80218287B3400B95A93 /* ContainerViewController.m in Sources */,
 				1A6BE4A317F6FE5F006C1BF8 /* XMPPMessageArchiving.m in Sources */,
 				1A6BE4A417F6FE5F006C1BF8 /* XMPPvCardAvatarModule.m in Sources */,
 				1A6BE4A517F6FE5F006C1BF8 /* XMPPMessage+XEP_0184.m in Sources */,
@@ -2763,9 +2839,11 @@
 				1A6BE4A717F6FE5F006C1BF8 /* XMPPPing.m in Sources */,
 				1A6BE4A817F6FE5F006C1BF8 /* XMPPAutoTime.m in Sources */,
 				1A6BE4A917F6FE5F006C1BF8 /* XMPPTime.m in Sources */,
+				B43216C11834C5060019C3DE /* POPDCell.m in Sources */,
 				1A6BE4AA17F6FE5F006C1BF8 /* XMPPElement+Delay.m in Sources */,
 				1A6BE4AB17F6FE5F006C1BF8 /* ASIAuthenticationDialog.m in Sources */,
 				1AF0856A1818EB7A00B82F81 /* RECommonFunctions.m in Sources */,
+				B43216B81834C5060019C3DE /* HZLocation.m in Sources */,
 				1A8A4B4818191C0100FCDEBA /* MJPhotoLoadingView.m in Sources */,
 				1A6BE4AC17F6FE5F006C1BF8 /* ASIDataCompressor.m in Sources */,
 				1A6BE4AE17F6FE5F006C1BF8 /* ASIDownloadCache.m in Sources */,
@@ -2785,7 +2863,6 @@
 				1A6BE53417F70BBA006C1BF8 /* MKAnnotationView+WebCache.m in Sources */,
 				1AF085591817ADF600B82F81 /* ProfilePhotoCell.m in Sources */,
 				1A6BE53517F70BBA006C1BF8 /* SDImageCache.m in Sources */,
-				B40A25A818322CA00030C562 /* HZAreaPickerView.m in Sources */,
 				1A6BE53617F70BBA006C1BF8 /* SDWebImageCompat.m in Sources */,
 				1A6BE53717F70BBA006C1BF8 /* SDWebImageDecoder.m in Sources */,
 				1A6BE53817F70BBA006C1BF8 /* SDWebImageDownloader.m in Sources */,
@@ -2808,7 +2885,6 @@
 				1A6BE57017F70CD9006C1BF8 /* BRCameraView.m in Sources */,
 				1A6BE57117F70CD9006C1BF8 /* BRCroppeView.m in Sources */,
 				1A6BE57D17F70CD9006C1BF8 /* BRImagePickerViewController.m in Sources */,
-				B40A25581830A34D0030C562 /* POPDCell.m in Sources */,
 				1A6BE57E17F70CD9006C1BF8 /* BRPreviewViewController.m in Sources */,
 				1A6BE58017F70CD9006C1BF8 /* BRTouchFreeView.m in Sources */,
 				1A6BE58317F70D53006C1BF8 /* BRProgressIndicator.m in Sources */,
@@ -2818,12 +2894,14 @@
 				1A6BE59317F710FF006C1BF8 /* DemoTableViewController.m in Sources */,
 				1A6BE59417F710FF006C1BF8 /* STableViewController.m in Sources */,
 				1A6BE62317F7115C006C1BF8 /* BaseFormViewController.m in Sources */,
+				B43216B11834C5060019C3DE /* ZCResearchViewController.m in Sources */,
 				1A6BE62417F7115C006C1BF8 /* BubbleMessageCell.m in Sources */,
 				1A6BE62517F7115C006C1BF8 /* BubbleView.m in Sources */,
 				1A8A4B5418191C5600FCDEBA /* MBProgressHUD.m in Sources */,
 				1A6BE62617F7115C006C1BF8 /* ImageViewCell.m in Sources */,
 				1A6BE62717F7115C006C1BF8 /* MessageInputView.m in Sources */,
 				1A6BE62817F7115C006C1BF8 /* MessageSoundEffect.m in Sources */,
+				B43216CF1834D2250019C3DE /* AMBlurView.m in Sources */,
 				1ADA32E718150E8A003D44DB /* ImageSourceViewController.m in Sources */,
 				1A6BE62917F7115C006C1BF8 /* MessagesViewController.m in Sources */,
 				1AF085751818EC6C00B82F81 /* DEMONavigationController.m in Sources */,
@@ -2836,9 +2914,11 @@
 				1A6BE64317F7115C006C1BF8 /* OFCChatRoomListViewController.m in Sources */,
 				1AF0856F1818EB7A00B82F81 /* UIViewController+REFrostedViewController.m in Sources */,
 				1A6BE64417F7115C006C1BF8 /* OFCChatroomViewController.m in Sources */,
+				B43216B21834C5060019C3DE /* ZCDefine.m in Sources */,
 				1A6BE64517F7115C006C1BF8 /* OFCChatViewController.m in Sources */,
 				1AF085741818EC6C00B82F81 /* DEMOMenuViewController.m in Sources */,
 				1A6BE64617F7115C006C1BF8 /* OFCRegisterViewController.m in Sources */,
+				B43216B41834C5060019C3DE /* ACPButton.m in Sources */,
 				1A6BE64817F7115C006C1BF8 /* OFCSearchBuddyViewController.m in Sources */,
 				1A6BE64A17F7115C006C1BF8 /* OFCSelectBuddysViewController.m in Sources */,
 				1A6BE64B17F7115C006C1BF8 /* OFCSettingsViewController.m in Sources */,
@@ -2864,13 +2944,10 @@
 				1A6BE65D17F7115C006C1BF8 /* OFCStringSetting.m in Sources */,
 				1A6BE65E17F7115C006C1BF8 /* OFCValueSetting.m in Sources */,
 				1A6BE65F17F7115C006C1BF8 /* MLoginInfo.m in Sources */,
-				B4194704182CFB0F004712AC /* ZCResearchViewController.m in Sources */,
 				1A6BE66017F7115C006C1BF8 /* MProfileInfo.m in Sources */,
 				1A6BE66117F7115C006C1BF8 /* MRelationAttention.m in Sources */,
 				1A6BE66217F7115C006C1BF8 /* MRelationBlacklist.m in Sources */,
 				1A6BE66317F7115C006C1BF8 /* MRelationFans.m in Sources */,
-				B4A16DC9182DD0190016A57E /* CCSegmentedControl.m in Sources */,
-				B487E80118287B3400B95A93 /* ACPButton.m in Sources */,
 				1A6BE66417F7115C006C1BF8 /* MRelationFavorite.m in Sources */,
 				1A6BE66517F7115C006C1BF8 /* MRelationFriends.m in Sources */,
 				1A6BE66617F7115C006C1BF8 /* BJGridItem.m in Sources */,
@@ -2881,7 +2958,6 @@
 				1A6BE67917F7134B006C1BF8 /* GroupSettingViewController.m in Sources */,
 				1A6BE67D17F7136C006C1BF8 /* UIHelper.m in Sources */,
 				1A6BE68017F71466006C1BF8 /* OFCXMPPManager.m in Sources */,
-				B40A2553183095490030C562 /* POPDViewController.m in Sources */,
 				1A6BE68717F715BE006C1BF8 /* OFCChatroom.m in Sources */,
 				1A6BE68817F715BE006C1BF8 /* OFCChatMessage.m in Sources */,
 				1A6BE68917F715BE006C1BF8 /* OFCBuddy.m in Sources */,
@@ -2988,7 +3064,7 @@
 		1A6BE31F17F6FC77006C1BF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Huali Zheng (RJH5S35GUK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Huali Zheng (RJH5S35GUK)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Circle/Circle-Prefix.pch";
@@ -3009,7 +3085,7 @@
 		1A6BE32017F6FC77006C1BF8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Huali Zheng (RJH5S35GUK)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Huali Zheng (RJH5S35GUK)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Circle/Circle-Prefix.pch";

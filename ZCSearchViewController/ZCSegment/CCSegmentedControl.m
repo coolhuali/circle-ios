@@ -7,8 +7,7 @@
 //
 
 #import "CCSegmentedControl.h"
-#define  KFONT    [UIFont fontWithName:@"Georgia-Bold" size:12]
-#define  KITEMWIDTH 24
+#import "ZCDefine.h"
 @interface DefaultStainView : UIView
 
 @end

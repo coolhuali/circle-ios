@@ -7,18 +7,11 @@
 //
 
 #import "ZCObjects.h"
+#import "ZCDefine.h"
 
-#define  KRECT_LABELFRAME      40,100,50,25
-#define  KRECT_LABELADDFRAME   100,100,25,25
-#define  KRECT_TEXTFIELDFRAME  100,100,120,25
-#define  KRECT_SEGMENTFRAME 100.0, 20.0, 120.0, 25.0
 
-#define  KALPHA    0.8
-#define  KFONT    [UIFont fontWithName:@"Georgia-Bold" size:12]
-#define  KCOLOR_LABELFONT [UIColor whiteColor]
-#define  KCOLOR_TEXTFIELDBACKGROUND [UIColor grayColor]
-#define  KCOLOR_LABELBACKGROUND [UIColor clearColor]
-#define KCOLOR_SEGMENTBACKGROUND [UIColor clearColor]
+
+
 
 @implementation ZCLabels
 -(id)init{
@@ -28,12 +21,12 @@
         /*--------------------------------------------------------------------------
          This type of button is created by default.
          --------------------------------------------------------------------------*/
-        [self setFrame:CGRectMake(KRECT_LABELFRAME)];
+        [self setFrame:KRECT_LABELFRAME];
         [self setFont:KFONT];
         [self setAlpha:KALPHA];
         [self setBackgroundColor:KCOLOR_LABELBACKGROUND];
-        [self setTextColor:KCOLOR_LABELFONT];
-        [self setTextAlignment:NSTextAlignmentCenter];
+        [self setTextColor:KCOLOR_FONT];
+        [self setTextAlignment:NSTextAlignmentLeft];
         
     }
     return self;
@@ -47,12 +40,12 @@
         /*--------------------------------------------------------------------------
          This type of button is created by default.
          --------------------------------------------------------------------------*/
-        [self setFrame:CGRectMake(KRECT_TEXTFIELDFRAME)];
+        [self setFrame:KRECT_TEXTFIELDFRAME];
         [self setBorderStyle:UITextBorderStyleRoundedRect];
         [self setFont:KFONT];
         [self setAlpha:KALPHA];
         [self setBackgroundColor:KCOLOR_TEXTFIELDBACKGROUND];
-        [self setTextColor:KCOLOR_LABELFONT];
+        [self setTextColor:KCOLOR_FONT];
         
         
     }
@@ -67,7 +60,7 @@
         self.backgroundColor = KCOLOR_SEGMENTBACKGROUND;
 
         self.alpha=KALPHA;
-        self.frame = CGRectMake(KRECT_SEGMENTFRAME);
+        self.frame = KRECT_SEGMENTFRAME;
         
         //设置背景图片，或者设置颜色，或者使用默认白色外观
 //        self.backgroundImage = [UIImage imageNamed:@"segment_bg.png"];
@@ -95,14 +88,56 @@
         /*--------------------------------------------------------------------------
          This type of button is created by default.
          --------------------------------------------------------------------------*/
-        [self setFrame:CGRectMake(KRECT_LABELADDFRAME)];
+        [self setFrame:KRECT_LABELADDFRAME];
         [self setFont:KFONT];
         [self setAlpha:KALPHA];
 //        [self setBackgroundColor:KCOLOR_LABELBACKGROUND];
-        [self setTextColor:KCOLOR_LABELFONT];
+        [self setTextColor:KCOLOR_FONT];
         [self setTextAlignment:NSTextAlignmentCenter];
         [self setBackgroundColor: [UIColor colorWithPatternImage:[UIImage imageNamed:@"ADD.png"]]];
 
+    }
+    return self;
+}
+
+
+@end
+@implementation ZCLabelsCYLC
+-(id)init{
+    
+    self=[super init];
+    if(self) {
+        /*--------------------------------------------------------------------------
+         This type of button is created by default.
+         --------------------------------------------------------------------------*/
+        [self setFrame:KRECT_LABELADDFRAME];
+        [self setFont:KFONT];
+        [self setAlpha:KALPHA];
+        //        [self setBackgroundColor:KCOLOR_LABELBACKGROUND];
+        [self setTextColor:KCOLOR_FONT];
+        [self setTextAlignment:NSTextAlignmentCenter];
+        [self setBackgroundColor: KCOLOR_LABELCYLCBACKGROUND];
+        
+    }
+    return self;
+}
+@end
+@implementation ZCLabelsCYQZ
+-(id)init{
+    
+    self=[super init];
+    if(self) {
+        /*--------------------------------------------------------------------------
+         This type of button is created by default.
+         --------------------------------------------------------------------------*/
+        [self setFrame:KRECT_LABELADDFRAME];
+        [self setFont:KFONT];
+        [self setAlpha:KALPHA];
+        //        [self setBackgroundColor:KCOLOR_LABELBACKGROUND];
+        [self setTextColor:KCOLOR_FONT];
+        [self setTextAlignment:NSTextAlignmentCenter];
+        [self setBackgroundColor: KCOLOR_LABELCYQZBACKGROUND];
+        
     }
     return self;
 }

@@ -7,8 +7,7 @@
 //
 
 #import "POPDCell.h"
-#define  KFONT    [UIFont fontWithName:@"Georgia-Bold" size:12]
-#define  KFONTSUB    [UIFont fontWithName:@"Georgia-Bold" size:8]
+#import "ZCDefine.h"
 @interface POPDCell ()
 
 
@@ -22,16 +21,16 @@
         self.backgroundColor=[UIColor  clearColor];
         _label=[[UILabel alloc]init];
         _label.font=KFONT;
-        _label.frame=CGRectMake(self.frame.origin.x+12, self.frame.origin.y-13, self.frame.size.width-12, self.frame.size.height-3) ;
-
+        _label.frame=CGRectMake(self.frame.origin.x+20, self.frame.origin.y-5, self.frame.size.width-20, self.frame.size.height) ;
+        _label.textAlignment=NSTextAlignmentNatural;
         [self addSubview:_label];
 
         _button=[[UIButton alloc]init];
 
         _button.titleLabel.font=KFONT;
 //        _button.backgroundColor=[UIColor redColor];
-        _button.alpha=0.8;
-        _button.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y-13, 10, self.frame.size.height-3) ;
+        _button.alpha=0.9;
+        _button.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y-5, 20, self.frame.size.height) ;
         [self addSubview:_button];
         // Initialization code
     }
@@ -47,7 +46,7 @@
         self.backgroundColor=[UIColor  clearColor];
         _labelsub=[[UILabel alloc]init];
         _labelsub.font=KFONTSUB;
-        _labelsub.frame=CGRectMake(self.frame.origin.x+15, self.frame.origin.y-13, self.frame.size.width-15, self.frame.size.height-3) ;
+        _labelsub.frame=CGRectMake(self.frame.origin.x+20, self.frame.origin.y-13, self.frame.size.width-20, self.frame.size.height-3) ;
         [self addSubview:_labelsub];
         // Initialization code
     }
