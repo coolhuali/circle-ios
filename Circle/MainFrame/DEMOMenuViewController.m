@@ -9,6 +9,8 @@
 #import "DEMOMenuViewController.h"
 #import "UIViewController+REFrostedViewController.h"
 
+#import "ZCViewController.h"
+
 #import "RecentListViewController.h"
 #import "ProfileListViewController.h"
 #import "ProfilePhotoViewController.h"
@@ -171,6 +173,10 @@
         FavoriteListViewController *controller = [[FavoriteListViewController alloc] init];
         navigationController.viewControllers = @[controller];
     }
+    else  if(indexPath.section == 0 && indexPath.row == 4) {
+        ZCViewController *controller = [[ZCViewController alloc] init];
+        navigationController.viewControllers = @[controller];
+    }
     else{
         if(items.count<=indexPath.row)return;
         NSDictionary *dict = [items objectAtIndex:indexPath.row];
@@ -196,7 +202,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
     if(sectionIndex==0)
-        return 4;
+        return 5;
     else
         return items.count;
 }
@@ -209,7 +215,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     if (indexPath.section == 0) {
-        NSArray *titles = @[NSLocalizedString(@"login.title", nil),NSLocalizedString(@"find.title", nil),NSLocalizedString(@"friends.title", nil),NSLocalizedString(@"favorite.title", nil)];
+        NSArray *titles = @[NSLocalizedString(@"login.title", nil),NSLocalizedString(@"find.title", nil),NSLocalizedString(@"friends.title", nil),NSLocalizedString(@"favorite.title", nil),NSLocalizedString(@"ZC.title", nil)];
         cell.textLabel.text = titles[indexPath.row];
     } else {
         if(items.count>indexPath.row){

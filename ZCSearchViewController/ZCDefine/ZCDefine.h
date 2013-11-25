@@ -7,6 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#define KZC_LBFONT1  [UIFont fontWithName:@"ArialRoundedMTBold" size:16]
+#define KZC_LBFONT2  [UIFont fontWithName:@"ArialRoundedMTBold" size:12]
+#define KZC_LBFONT3  [UIFont fontWithName:@"ArialRoundedMTBold" size:12]
+#define kZC_IMRECT   CGRectMake(  5,  5,  80, 80)
+#define kZC_LBRECT1  CGRectMake(100,  5, 200, 20)
+#define kZC_LBRECT2  CGRectMake(100, 40, 100, 20)
+#define kZC_LBRECT3  CGRectMake(100, 60, 200, 20)
+#define kZC_TBRECT   CGRectMake(  0,  0, self.view.frame.size.width, self.view.frame.size.height)
+
 
 #define  kDuration 0.3
 #define  KFONT    [UIFont fontWithName:@"Georgia-Bold" size:12]

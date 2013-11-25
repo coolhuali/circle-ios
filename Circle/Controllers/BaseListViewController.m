@@ -18,9 +18,9 @@
 -(void)showMenuItem{
     if(self.navigationController.navigationBar.backItem == nil){
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"menu", nil)
-                                                                                 style:UIBarButtonItemStylePlain
-                                                                                target:(DEMONavigationController *)self.navigationController
-                                                                                action:@selector(showMenu)];
+             style:UIBarButtonItemStylePlain
+            target:(DEMONavigationController *)self.navigationController
+            action:@selector(showMenu)];
     }
 }
 

@@ -401,7 +401,10 @@
 		B43216C01834C5060019C3DE /* CCSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216AB1834C5060019C3DE /* CCSegmentedControl.m */; };
 		B43216C11834C5060019C3DE /* POPDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216AE1834C5060019C3DE /* POPDCell.m */; };
 		B43216C21834C5060019C3DE /* POPDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216B01834C5060019C3DE /* POPDViewController.m */; };
-		B43216CF1834D2250019C3DE /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B43216CD1834D2250019C3DE /* AMBlurView.m */; };
+		B4986E801842DFBC00527613 /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4986E7F1842DFBC00527613 /* AMBlurView.m */; };
+		B4986E8E1843058500527613 /* ZCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4986E8A1843058500527613 /* ZCViewController.m */; };
+		B4986E8F1843058500527613 /* ZCTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4986E8C1843058500527613 /* ZCTableCell.m */; };
+		B4986E901843058500527613 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B4986E8D1843058500527613 /* test.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1075,8 +1078,13 @@
 		B43216AE1834C5060019C3DE /* POPDCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDCell.m; sourceTree = "<group>"; };
 		B43216AF1834C5060019C3DE /* POPDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDViewController.h; sourceTree = "<group>"; };
 		B43216B01834C5060019C3DE /* POPDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPDViewController.m; sourceTree = "<group>"; };
-		B43216CC1834D2250019C3DE /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBlurView.h; sourceTree = "<group>"; };
-		B43216CD1834D2250019C3DE /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBlurView.m; sourceTree = "<group>"; };
+		B4986E7E1842DFBC00527613 /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMBlurView.h; sourceTree = "<group>"; };
+		B4986E7F1842DFBC00527613 /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMBlurView.m; sourceTree = "<group>"; };
+		B4986E891843058500527613 /* ZCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCViewController.h; sourceTree = "<group>"; };
+		B4986E8A1843058500527613 /* ZCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCViewController.m; sourceTree = "<group>"; };
+		B4986E8B1843058500527613 /* ZCTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTableCell.h; sourceTree = "<group>"; };
+		B4986E8C1843058500527613 /* ZCTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTableCell.m; sourceTree = "<group>"; };
+		B4986E8D1843058500527613 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1120,6 +1128,8 @@
 				1A6BE30317F6FC77006C1BF8 /* Frameworks */,
 				1A6BE30217F6FC77006C1BF8 /* Products */,
 				1AC56F6D181FB0D000C5BA69 /* README */,
+				B43216901834C5060019C3DE /* ZCDefine */,
+				B4986E741842DE8B00527613 /* ZCTableViewController */,
 				B432168C1834C5060019C3DE /* ZCSearchViewController */,
 			);
 			sourceTree = "<group>";
@@ -2426,9 +2436,8 @@
 		B432168C1834C5060019C3DE /* ZCSearchViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B43216C91834D2070019C3DE /* ZCBlur */,
+				B4986E7D1842DFBC00527613 /* ZCBlur */,
 				B432168D1834C5060019C3DE /* ZCController */,
-				B43216901834C5060019C3DE /* ZCDefine */,
 				B43216931834C5060019C3DE /* ZCObjects */,
 				B43216961834C5060019C3DE /* ZCPanButton */,
 				B432169B1834C5060019C3DE /* ZCPickerView */,
@@ -2454,7 +2463,8 @@
 				B43216911834C5060019C3DE /* ZCDefine.h */,
 				B43216921834C5060019C3DE /* ZCDefine.m */,
 			);
-			path = ZCDefine;
+			name = ZCDefine;
+			path = ZCSearchViewController/ZCDefine;
 			sourceTree = "<group>";
 		};
 		B43216931834C5060019C3DE /* ZCObjects */ = {
@@ -2523,13 +2533,26 @@
 			path = ZCTabelView;
 			sourceTree = "<group>";
 		};
-		B43216C91834D2070019C3DE /* ZCBlur */ = {
+		B4986E741842DE8B00527613 /* ZCTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B43216CC1834D2250019C3DE /* AMBlurView.h */,
-				B43216CD1834D2250019C3DE /* AMBlurView.m */,
+				B4986E891843058500527613 /* ZCViewController.h */,
+				B4986E8A1843058500527613 /* ZCViewController.m */,
+				B4986E8B1843058500527613 /* ZCTableCell.h */,
+				B4986E8C1843058500527613 /* ZCTableCell.m */,
+				B4986E8D1843058500527613 /* test.jpg */,
 			);
-			name = ZCBlur;
+			name = ZCTableViewController;
+			path = ZCSearchViewController/ZCTableViewController;
+			sourceTree = "<group>";
+		};
+		B4986E7D1842DFBC00527613 /* ZCBlur */ = {
+			isa = PBXGroup;
+			children = (
+				B4986E7E1842DFBC00527613 /* AMBlurView.h */,
+				B4986E7F1842DFBC00527613 /* AMBlurView.m */,
+			);
+			path = ZCBlur;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2689,6 +2712,7 @@
 				1AC56F6E181FB0D000C5BA69 /* README in Resources */,
 				1ADCBB0C17FAD47700BAA9B3 /* Text.png in Resources */,
 				1A6BE66C17F7115C006C1BF8 /* deletbutton.png in Resources */,
+				B4986E901843058500527613 /* test.jpg in Resources */,
 				1AF085791818F32B00B82F81 /* avatar@2x.jpg in Resources */,
 				B43216BB1834C5060019C3DE /* chinaarea.plist in Resources */,
 				1A6BE66D17F7115C006C1BF8 /* icon.png in Resources */,
@@ -2729,6 +2753,7 @@
 				1A6BE44717F6FE5F006C1BF8 /* XMPPDigestMD5Authentication.m in Sources */,
 				1A6BE44817F6FE5F006C1BF8 /* XMPPPlainAuthentication.m in Sources */,
 				1A8A4B4718191C0100FCDEBA /* MJPhotoBrowser.m in Sources */,
+				B4986E8F1843058500527613 /* ZCTableCell.m in Sources */,
 				1A6BE44917F6FE5F006C1BF8 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				1A6BE44A17F6FE5F006C1BF8 /* NSData+XMPP.m in Sources */,
 				1A6BE44B17F6FE5F006C1BF8 /* NSNumber+XMPP.m in Sources */,
@@ -2790,6 +2815,7 @@
 				1A6BE47D17F6FE5F006C1BF8 /* XMPPRoomHybrid.xcdatamodeld in Sources */,
 				1A6BE47E17F6FE5F006C1BF8 /* XMPPRoomHybridStorage.m in Sources */,
 				1A8A4B4A18191C0100FCDEBA /* MJPhotoToolbar.m in Sources */,
+				B4986E8E1843058500527613 /* ZCViewController.m in Sources */,
 				1A6BE47F17F6FE5F006C1BF8 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
 				1A6BE48017F6FE5F006C1BF8 /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
 				1A6BE48117F6FE5F006C1BF8 /* XMPPRoomMemoryStorage.m in Sources */,
@@ -2823,6 +2849,7 @@
 				1A6BE49917F6FE5F006C1BF8 /* NSData+Base64.m in Sources */,
 				1A5AB44117FEA3360095C7B2 /* MRosterInfo.m in Sources */,
 				1A6BE49A17F6FE5F006C1BF8 /* XMPPCapabilities.xcdatamodel in Sources */,
+				B4986E801842DFBC00527613 /* AMBlurView.m in Sources */,
 				1A6BE49B17F6FE5F006C1BF8 /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
 				1A6BE49C17F6FE5F006C1BF8 /* XMPPCapsCoreDataStorageObject.m in Sources */,
 				1A6BE49D17F6FE5F006C1BF8 /* XMPPCapsResourceCoreDataStorageObject.m in Sources */,
@@ -2901,7 +2928,6 @@
 				1A6BE62617F7115C006C1BF8 /* ImageViewCell.m in Sources */,
 				1A6BE62717F7115C006C1BF8 /* MessageInputView.m in Sources */,
 				1A6BE62817F7115C006C1BF8 /* MessageSoundEffect.m in Sources */,
-				B43216CF1834D2250019C3DE /* AMBlurView.m in Sources */,
 				1ADA32E718150E8A003D44DB /* ImageSourceViewController.m in Sources */,
 				1A6BE62917F7115C006C1BF8 /* MessagesViewController.m in Sources */,
 				1AF085751818EC6C00B82F81 /* DEMONavigationController.m in Sources */,

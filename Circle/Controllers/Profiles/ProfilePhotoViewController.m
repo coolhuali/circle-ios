@@ -41,7 +41,7 @@
 {
     [super viewDidLoad];
     [super showMenuItem];
-    mProfile = [MProfileInfo alloc];
+    mProfile = [MProfileInfo alloc];//1
     mRelation = [MRelationFavorite alloc ];
     self.title = NSLocalizedString(@"find.title", nil);
     [self setupHeader];
